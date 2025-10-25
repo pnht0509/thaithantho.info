@@ -4,19 +4,21 @@ import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { Project } from "./pages/Project";
 import { ProjectList } from "./pages/ProjectList";
+import { Navbar } from "./component/NavBar";
 
-function App() {
+export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/projects" element={<ProjectList />} />
-      <Route path="/projects/:id" element={<Project />} />
-
-      <Route />
-    </Routes>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        cl
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/projects" element={<ProjectList />} />
+        <Route path="/projects/:id" element={<Project />} />
+        <Route />
+      </Routes>
+    </>
   );
 }
-
-export default App;

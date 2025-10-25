@@ -1,0 +1,106 @@
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: var(--font-family);
+}
+
+.home-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.7);
+}
+
+.content-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.center-video {
+  max-width: 90%;
+}
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  left: auto; /* ensure it doesn't use left positioning */
+  transform: none; /* remove centered translation */
+  background: rgba(0, 0, 0, 0.65);
+  padding: 10px 18px;
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo img {
+  height: 10px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+  display: inline-block; /* ensures currentTarget is the link element for events */
+  letter-spacing: 0.6px;
+}
+
+/* optional visual tweak for hover */
+.nav-links a:hover {
+  color: #ffd;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #ddd;
+}
+
+.webgl-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+}
