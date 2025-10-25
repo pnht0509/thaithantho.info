@@ -10,52 +10,59 @@ export function VideoBackground({
     const container = containerRef.current;
     if (!container) return;
 
-    // ensure we have a sensible size
-    const getSize = () => {
-      const w = container.clientWidth || window.innerWidth;
-      const h = container.clientHeight || window.innerHeight;
-      return { w, h };
-    };
+    // --- Utility: get container size ---
+    const getSize = () => ({
+      w: container.clientWidth || window.innerWidth,
+      h: container.clientHeight || window.innerHeight,
+    });
 
-    // --- Setup renderer, scene, camera
+    // --- Renderer setup ---
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     const { w, h } = getSize();
     renderer.setSize(w, h, false);
     renderer.domElement.className = "webgl-canvas";
-    renderer.domElement.style.width = "100%";
-    renderer.domElement.style.height = "100%";
+    renderer.domElement.style.cssText = `
+      width: 100%;
+      height: 100%;
+      display: block;
+    `;
     container.appendChild(renderer.domElement);
 
+    // --- Scene and camera ---
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 10);
     camera.position.z = 1;
 
-    // --- Video element and texture
+    // --- Video setup ---
     const video = document.createElement("video");
-    video.src = src;
-    video.crossOrigin = "anonymous";
-    video.loop = true;
-    video.muted = true;
-    video.playsInline = true;
-    video.autoplay = true;
-    // try to start; may be blocked until user interaction
-    video.play().catch(() => {});
+    Object.assign(video, {
+      src,
+      crossOrigin: "anonymous",
+      loop: true,
+      muted: true,
+      playsInline: true,
+      autoplay: true,
+    });
+    video.play().catch(() => {
+      console.warn("Autoplay prevented. User interaction required.");
+    });
 
     const texture = new THREE.VideoTexture(video);
     texture.minFilter = THREE.LinearFilter;
     texture.magFilter = THREE.LinearFilter;
     texture.format = THREE.RGBAFormat;
 
-    // --- Shader material
+    // --- Shader uniforms ---
     const uniforms = {
       u_texture: { value: texture },
       u_time: { value: 0 },
-      u_mouse: { value: new THREE.Vector2(0.5 * w, 0.5 * h) }, // pixel coords
+      u_mouse: { value: new THREE.Vector2(w / 2, h / 2) },
       u_resolution: { value: new THREE.Vector2(w, h) },
     };
 
-    const vertex = `
+    // --- Vertex Shader ---
+    const vertexShader = `
       varying vec2 v_uv;
       void main() {
         v_uv = uv;
@@ -63,7 +70,8 @@ export function VideoBackground({
       }
     `;
 
-    const fragment = `
+    // --- Fragment Shader ---
+    const fragmentShader = `
       precision mediump float;
       varying vec2 v_uv;
       uniform sampler2D u_texture;
@@ -73,81 +81,80 @@ export function VideoBackground({
 
       void main() {
         vec2 uv = v_uv;
-        // convert mouse from pixel -> normalized [0,1]
         vec2 mouse = u_mouse / u_resolution;
+
         float dist = distance(uv, mouse);
-        float ripple = sin((dist * 30.0) - (u_time * 3.0)) * 0.03;
-        vec2 dir = normalize(uv - mouse + 0.0001); // small bias to avoid zero-length
-        vec2 offset = dir * ripple * (0.6 / (dist + 0.02));
+        float ripple = sin(dist * 25.0 - u_time * 2.0) * 0.02;
+        vec2 dir = normalize(uv - mouse + 0.0001);
+        vec2 offset = dir * ripple / (dist + 0.03);
+
         vec4 color = texture2D(u_texture, uv + offset);
         gl_FragColor = color;
       }
     `;
 
+    // --- Create mesh ---
+    const geometry = new THREE.PlaneGeometry(2, 2);
     const material = new THREE.ShaderMaterial({
       uniforms,
-      vertexShader: vertex,
-      fragmentShader: fragment,
+      vertexShader,
+      fragmentShader,
     });
-
-    const geometry = new THREE.PlaneGeometry(2, 2);
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 
-    // --- mouse handling (pixel coords)
-    function onPointerMove(e) {
+    // --- Mouse movement ---
+    const onPointerMove = (e) => {
       const rect = renderer.domElement.getBoundingClientRect();
       const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      uniforms.u_mouse.value.set(x, rect.height - y); // flip Y to shader's origin
-    }
+      const y = rect.height - (e.clientY - rect.top); // flip Y
+      uniforms.u_mouse.value.set(x, y);
+    };
     window.addEventListener("pointermove", onPointerMove);
 
-    // --- resize handling
-    function onResize() {
+    // --- Resize handling ---
+    const onResize = () => {
       const { w: newW, h: newH } = getSize();
       renderer.setSize(newW, newH, false);
       uniforms.u_resolution.value.set(newW, newH);
-    }
+    };
     window.addEventListener("resize", onResize);
 
-    // --- render loop
-    let rafId;
+    // --- Animation loop ---
     const clock = new THREE.Clock();
-    function animate() {
-      uniforms.u_time.value += clock.getDelta();
+    let rafId;
+
+    const animate = () => {
+      uniforms.u_time.value = clock.getElapsedTime();
       if (texture) texture.needsUpdate = true;
       renderer.render(scene, camera);
       rafId = requestAnimationFrame(animate);
-    }
+    };
     animate();
 
-    // cleanup
+    // --- Cleanup ---
     return () => {
       cancelAnimationFrame(rafId);
       window.removeEventListener("pointermove", onPointerMove);
       window.removeEventListener("resize", onResize);
-      try {
-        geometry.dispose();
-        material.dispose();
-        texture.dispose();
-        // release GL context
-        renderer.forceContextLoss && renderer.forceContextLoss();
-        renderer.domElement && renderer.domElement.remove();
-      } catch (err) {
-        // ignore dispose errors
-      }
-      try {
-        video.pause();
-        video.src = "";
-      } catch (err) {}
+
+      geometry.dispose();
+      material.dispose();
+      texture.dispose();
+      renderer.dispose?.();
+      renderer.forceContextLoss?.();
+      renderer.domElement?.remove();
+
+      video.pause();
+      video.src = "";
+      video.load();
     };
-  }, [src]); // <--- run effect when src changes
+  }, [src]);
 
   return (
     <div
       ref={containerRef}
-      style={{ position: "absolute", inset: 0, zIndex: -1 }}
+      style={{ position: "absolute", inset: 0, zIndex: -1, overflow: "hidden" }}
     />
   );
 }

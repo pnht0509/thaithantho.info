@@ -104,3 +104,159 @@ body {
   display: block;
   z-index: -1;
 }
+
+.projects-container {
+  padding: 80px 40px;
+  min-height: 100vh;
+  background: #000;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #111;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.project-info p {
+  margin: 0;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.year {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Project List Styles */
+.projects-container {
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: #000;
+  color: white;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.project-wrapper {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-row {
+  position: relative;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.project-info {
+  display: grid;
+  gap: 8px;
+}
+
+.project-hover {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  background: #000;
+}
+
+.project-hover video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .projects-container {
+    padding: 80px 40px;
+  }
+
+  .project-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 100px;
+    align-items: center;
+    padding: 30px 40px;
+    transition: background 0.3s ease;
+  }
+
+  .project-info {
+    display: contents;
+  }
+
+  .project-wrapper.active .project-row {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .project-wrapper.active .project-hover {
+    height: 400px; /* Adjust based on your needs */
+    padding: 0 40px 40px 40px;
+  }
+
+  .project-wrapper.active ~ .project-wrapper {
+    opacity: 0.3;
+  }
+
+  .project-title,
+  .project-role,
+  .project-type,
+  .project-year {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+}
