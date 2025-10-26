@@ -9,6 +9,11 @@ const projects = [
     type: "Web Design",
     year: "2023",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    images: [
+      "https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+      "https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+      "https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    ],
   },
   {
     id: 2,
@@ -17,6 +22,11 @@ const projects = [
     type: "3D Animation",
     year: "2023",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    images: [
+      "https://picsum.photos/seed/project2-1/800/600",
+      "https://picsum.photos/seed/project2-2/800/600",
+      "https://picsum.photos/seed/project2-3/800/600",
+    ],
   },
   {
     id: 3,
@@ -25,6 +35,11 @@ const projects = [
     type: "Motion Graphics",
     year: "2022",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    images: [
+      "https://picsum.photos/seed/project3-1/800/600",
+      "https://picsum.photos/seed/project3-2/800/600",
+      "https://picsum.photos/seed/project3-3/800/600",
+    ],
   },
   {
     id: 4,
@@ -33,6 +48,11 @@ const projects = [
     type: "UI/UX Design",
     year: "2022",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    images: [
+      "https://picsum.photos/seed/project4-1/800/600",
+      "https://picsum.photos/seed/project4-2/800/600",
+      "https://picsum.photos/seed/project4-3/800/600",
+    ],
   },
   {
     id: 5,
@@ -41,6 +61,11 @@ const projects = [
     type: "Brand Identity",
     year: "2022",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    images: [
+      "https://picsum.photos/seed/project5-1/800/600",
+      "https://picsum.photos/seed/project5-2/800/600",
+      "https://picsum.photos/seed/project5-3/800/600",
+    ],
   },
   {
     id: 6,
@@ -49,6 +74,11 @@ const projects = [
     type: "Photography",
     year: "2021",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    images: [
+      "https://picsum.photos/seed/project6-1/800/600",
+      "https://picsum.photos/seed/project6-2/800/600",
+      "https://picsum.photos/seed/project6-3/800/600",
+    ],
   },
   {
     id: 7,
@@ -57,6 +87,11 @@ const projects = [
     type: "Web Development",
     year: "2021",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    images: [
+      "https://picsum.photos/seed/project7-1/800/600",
+      "https://picsum.photos/seed/project7-2/800/600",
+      "https://picsum.photos/seed/project7-3/800/600",
+    ],
   },
   {
     id: 8,
@@ -65,6 +100,11 @@ const projects = [
     type: "Installation",
     year: "2021",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    images: [
+      "https://picsum.photos/seed/project8-1/800/600",
+      "https://picsum.photos/seed/project8-2/800/600",
+      "https://picsum.photos/seed/project8-3/800/600",
+    ],
   },
   {
     id: 9,
@@ -73,6 +113,11 @@ const projects = [
     type: "Visual Design",
     year: "2020",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    images: [
+      "https://picsum.photos/seed/project9-1/800/600",
+      "https://picsum.photos/seed/project9-2/800/600",
+      "https://picsum.photos/seed/project9-3/800/600",
+    ],
   },
   {
     id: 10,
@@ -81,6 +126,11 @@ const projects = [
     type: "Interactive",
     year: "2020",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    images: [
+      "https://picsum.photos/seed/project10-1/800/600",
+      "https://picsum.photos/seed/project10-2/800/600",
+      "https://picsum.photos/seed/project10-3/800/600",
+    ],
   },
 ];
 
@@ -129,9 +179,14 @@ export function ProjectList() {
             </Link>
 
             <div className="project-hover">
-              <video muted loop playsInline preload="metadata">
-                <source src={project.video} type="video/mp4" />
-              </video>
+              <div className="project-media-grid">
+                <video muted loop playsInline preload="metadata">
+                  <source src={project.video} type="video/mp4" />
+                </video>
+                {project.images && project.images.map((img, idx) => (
+                  <img key={idx} src={img} alt={`${project.title} ${idx + 1}`} />
+                ))}
+              </div>
             </div>
           </div>
         ))}
