@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const projects = [
   {
     id: 1,
-    title: "Project One",
+    title: "Ă̸̢̢ḿ̶̧͓ͅ I̶̛̐̈͠.  ̸͐̏͑̅D̴̘͈͂͝ȯ̸̟̽͛i̶͛͋̉̓n̴͂̎̒̿g̶̩̰̅͌ ̴̎͗̔͝T̴͐̒̚͠h̸͆̈̈́͝is Ri͈̯g̶͍͗̽͘h̴͌͗͆͝t̶͙̥͛́?̷̎͌",
     role: "Creative Director",
     type: "Web Design",
     year: "2023",
@@ -17,7 +17,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Project Two",
+    title: "Dominic Fike - Mama's Boy (Unofficial Video)",
     role: "3D Animator",
     type: "3D Animation",
     year: "2023",
@@ -30,7 +30,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Project Three",
+    title: "Whimsical Reality",
     role: "Motion Graphics Designer",
     type: "Motion Graphics",
     year: "2022",
@@ -43,7 +43,7 @@ const projects = [
   },
   {
     id: 4,
-    title: "Project Four",
+    title: "How to uncake",
     role: "UI/UX Designer",
     type: "UI/UX Design",
     year: "2022",
@@ -56,7 +56,7 @@ const projects = [
   },
   {
     id: 5,
-    title: "Project Five",
+    title: "Shape of Memories",
     role: "Brand Identity Designer",
     type: "Brand Identity",
     year: "2022",
@@ -69,7 +69,7 @@ const projects = [
   },
   {
     id: 6,
-    title: "Project Six",
+    title: "\"Poor\" Thoughts",
     role: "Photographer",
     type: "Photography",
     year: "2021",
@@ -82,7 +82,7 @@ const projects = [
   },
   {
     id: 7,
-    title: "Project Seven",
+    title: "Dissolving Dimensions",
     role: "Web Developer",
     type: "Web Development",
     year: "2021",
@@ -95,7 +95,7 @@ const projects = [
   },
   {
     id: 8,
-    title: "Project Eight",
+    title: "Efferescent",
     role: "Installation Artist",
     type: "Installation",
     year: "2021",
@@ -108,7 +108,7 @@ const projects = [
   },
   {
     id: 9,
-    title: "Project Nine",
+    title: "Anybody's Anything",
     role: "Visual Designer",
     type: "Visual Design",
     year: "2020",
@@ -121,7 +121,7 @@ const projects = [
   },
   {
     id: 10,
-    title: "Project Ten",
+    title: "Streamer",
     role: "Interactive Designer",
     type: "Interactive",
     year: "2020",
@@ -136,6 +136,17 @@ const projects = [
 
 export function ProjectList() {
   const [activeId, setActiveId] = useState(null);
+
+  const slugify = (text) => {
+    return text
+      .toString()
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^\w\-]+/g, '')
+      .replace(/\-\-+/g, '-')
+      .replace(/^-+/, '')
+      .replace(/-+$/, '');
+  };
 
   const handleMouseEnter = (event, id) => {
     setActiveId(id);
@@ -165,7 +176,7 @@ export function ProjectList() {
             }`}
           >
             <Link
-              to={`/project/${project.id}`}
+              to={`/project/${slugify(project.title)}`}
               className="project-row"
               onMouseEnter={(e) => handleMouseEnter(e, project.id)}
               onMouseLeave={handleMouseLeave}
