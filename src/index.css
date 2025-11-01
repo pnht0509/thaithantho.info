@@ -153,7 +153,7 @@ body {
 }
 
 .project-info h3 {
-  margin: 0 0 8px;
+  margin: 0 0 0 0;
   font-size: 1.2rem;
 }
 
@@ -194,7 +194,7 @@ body {
 
 .project-row {
   position: relative;
-  padding: 20px 0 20px 20px;
+  padding: 12px 0 12px 20px;
   text-decoration: none;
   color: white;
   display: block;
@@ -209,7 +209,7 @@ body {
   height: 0;
   overflow: hidden;
   transition: height 0.3s ease;
-  background: #000;
+  background: #ffff;
 }
 
 .project-media-grid {
@@ -243,14 +243,14 @@ body {
 /* Desktop Layout */
 @media (min-width: 768px) {
   .projects-container {
-    padding: 40px 0 0 0;
+    padding: 60px 0 0 0;
   }
 
   .project-row {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 100px;
     align-items: center;
-    padding: 30px 0 30px 40px;
+    padding: 12px 0 12px 40px;
     transition: background 0.3s ease;
   }
 
@@ -259,7 +259,9 @@ body {
   }
 
   .project-wrapper.active .project-row {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(255, 255, 255);
+    border-radius: 10px 10px 0 0;
+    color: black;
   }
 
   .project-wrapper.active .project-hover {
