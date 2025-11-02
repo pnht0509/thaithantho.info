@@ -1,11 +1,13 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import Flickity from "flickity";
+import "flickity/css/flickity.css";
 
 const projects = [
   {
     id: 1,
-    title: "Am I Doing This Right?",
-    role: "Creative Director",
+    title: "Ă̸̢̢ḿ̶̧͓ͅ I̶̛̐̈͠.  ̸͐̏͑̅D̴̘͈͂͝ȯ̸̟̽͛i̶͛͋̉̓n̴͂̎̒̿g̶̩̰̅͌ ̴̎͗̔͝T̴͐̒̚͠h̸͆̈̈́͝is Ri͈̯g̶͍͗̽͘h̴͌͗͆͝t̶͙̥͛́?̷̎͌",
+    role: "Creative Director, UI/UX Designer, 3D Animator, Motion Graphics Designer, Photographer, Installation Artist, Visual Designer, Interactive Designer, Web Developer",
     type: "Web Design",
     year: "2023",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
@@ -16,9 +18,10 @@ const projects = [
     ],
     coverImage: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200",
     paragraphs: [
-      "This is a compelling project that explores the boundaries of creative expression. Through innovative design and thoughtful implementation, we've created something truly unique that challenges conventional thinking.",
-      "The project represents a collaborative effort between diverse creative minds, bringing together expertise from multiple disciplines to craft an experience that resonates deeply with its audience."
-    ]
+      "Am I Doing It Right? is a generative audiovisual system that embodies the creative anxiety many artists experience, the self-doubt and questioning that often accompany the artistic process. The system continually questions itself, loops endlessly, and exists in a state of digital uncertainty. The project is presented through a CRT television to evoke nostalgia and imperfection, emphasizing its analog and human qualities.",
+      "An infinite loop of generative anxiety run autonomously for 2 to 2.5 minutes each cycle. There's no human input during the process, each run produces a new work of art born from frest doubts and shifting states of creativity."
+    ],
+    credit: "Creative Director: thaithantho | Developer: John Doe | Sound Design: Jane Smith"
   },
   {
     id: 2,
@@ -31,12 +34,40 @@ const projects = [
       "https://picsum.photos/seed/project2-1/800/600",
       "https://picsum.photos/seed/project2-2/800/600",
       "https://picsum.photos/seed/project2-3/800/600",
+      "https://picsum.photos/seed/project3-1/800/600",
+      "https://picsum.photos/seed/project3-2/800/600",
+      "https://picsum.photos/seed/project3-3/800/600",
     ],
     coverImage: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200",
     paragraphs: [
       "A visually stunning animation project that brings music to life through dynamic 3D graphics and fluid motion.",
       "This project showcases advanced animation techniques combined with a deep understanding of narrative storytelling in visual media."
-    ]
+    ],
+    credit: `MUSIC:
+Mama's Boy - Dominic Fike
+
+Starring: ALISHA, EDOMATIC, ERIC NGUYEN, CHRYSTAL TRAN
+
+PRODUCTION HOUSE - TITANIC PRODUCTION
+Director: EDOMATIC, ALISHA, THAITHANTHO
+Producer: ALISHA
+Director of Photography: EDOMATIC
+1st Assistant Director: THAITHANTHO
+2nd Assistant Director: ALISHA
+Production Assistant: KHIEM TANG
+Art Director: ALISHA
+Art Assistant: EDOMATIC, THAITHANTHO
+Camera Operator: EDOMATIC
+A.C: THAITHANTHO
+Camera Equipment: THAITHANTHO, RMIT UNIVERSITY
+D.I.T: THAITHANTHO
+
+POST PRODUCTION - TITANIC PRODUCTION
+Post Producer: ALISHA
+Editor: EDOMATIC, THAITHANTHO
+Colorist: THAITHANTHO
+VFX Artist: THAITHANTHO, ALISHA
+Special thanks to Heiniken, Vaseline, Corona, Hungry Jack's, Woollies, Kellogg's Corn Flakes, Scarlett Saturdays, RMIT University, UBER, KIA`
   },
   {
     id: 3,
@@ -187,6 +218,8 @@ const projects = [
 export function Project() {
   const { slug } = useParams();
   const [project, setProject] = useState(null);
+  const carouselRef = useRef(null);
+  const flickityInstanceRef = useRef(null);
 
   const slugify = (text) => {
     return text
@@ -204,6 +237,48 @@ export function Project() {
     setProject(foundProject || projects[0]);
   }, [slug]);
 
+  useEffect(() => {
+    if (!project || !project.images || !carouselRef.current) return;
+
+    // Initialize Flickity
+    const flkty = new Flickity(carouselRef.current, {
+      freeScroll: true,
+      wrapAround: true,
+      autoPlay: false,
+      prevNextButtons: false,
+      pageDots: false,
+      cellAlign: 'center',
+      contain: false,
+      imagesLoaded: true,
+      groupCells: false,
+      dragThreshold: 10,
+      friction: 0.1,
+      selectedAttraction: 0.001,
+      freeScrollFriction: 0.15
+    });
+
+    flickityInstanceRef.current = flkty;
+
+    // Cleanup
+    return () => {
+      if (flkty) {
+        flkty.destroy();
+      }
+    };
+  }, [project]);
+
+  const handleNext = () => {
+    if (flickityInstanceRef.current) {
+      flickityInstanceRef.current.next();
+    }
+  };
+
+  const handlePrev = () => {
+    if (flickityInstanceRef.current) {
+      flickityInstanceRef.current.previous();
+    }
+  };
+
   if (!project) return <div>Loading...</div>;
 
   return (
@@ -212,7 +287,9 @@ export function Project() {
       <div className="project-cover">
         <img src={project.coverImage} alt={project.title} />
         <div className="project-cover-overlay">
-          <h1 className="project-cover-title">{project.title}</h1>
+          <h1 className="project-cover-title">{project.title.toUpperCase()}</h1>
+          <div className="project-cover-type">{project.type}</div>
+          <div className="project-cover-role">{project.role}</div>
         </div>
       </div>
 
@@ -221,24 +298,61 @@ export function Project() {
         <div className="project-content-main">
           {/* Text on Left */}
           <div className="project-text">
+            <h2 className="project-section-heading">About</h2>
             <p>{project.paragraphs[0]}</p>
             <p>{project.paragraphs[1]}</p>
           </div>
 
           {/* Video on Right */}
           <div className="project-video">
+            <h2 className="project-section-heading">Video</h2>
             <video controls autoPlay muted loop>
               <source src={project.video} type="video/mp4" />
             </video>
           </div>
         </div>
 
-        {/* Gallery */}
-        <div className="project-gallery">
-          {project.images.map((img, idx) => (
-            <img key={idx} src={img} alt={`${project.title} image ${idx + 1}`} />
-          ))}
+        {/* Credits */}
+        {project.credit && (
+          <div className="project-credit">
+            <h2 className="project-section-heading">Credits</h2>
+            <p>{project.credit}</p>
+          </div>
+        )}
+
+
+      </div>
+              {/* Gallery */}
+              <div className="project-gallery">
+          <h2 className="project-section-heading">Gallery</h2>
+          <div className="project-gallery-container">
+            <button 
+              className="gallery-nav-btn gallery-nav-left"
+              onClick={handlePrev}
+              aria-label="Previous image"
+            >
+              ‹
+            </button>
+            <div className="carousel" ref={carouselRef}>
+              {project.images.map((img, idx) => (
+                <div key={idx} className="carousel-cell">
+                  <img src={img} alt={`${project.title} image ${idx + 1}`} />
+                </div>
+              ))}
+            </div>
+            <button 
+              className="gallery-nav-btn gallery-nav-right"
+              onClick={handleNext}
+              aria-label="Next image"
+            >
+              ›
+            </button>
+          </div>
         </div>
+
+      {/* Copyright */}
+      <div className="project-copyright">
+        <p>© thaithantho's portfolio. All Right Reserved</p>
       </div>
     </div>
   );
