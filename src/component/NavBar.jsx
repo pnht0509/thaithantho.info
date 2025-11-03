@@ -55,43 +55,60 @@ function stopScramble(el) {
 export function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">
-        <NavLink to="/">
-          <img src="src/assets/logo.png" alt="Logo" />
-        </NavLink>
+      <div className="nav-title">THAITHANTHO</div>
+      <div className="nav-links-row">
+        <ul className="nav-links">
+          <li>
+            <NavLink
+              to="/"
+              onMouseEnter={(e) => startScramble(e.currentTarget)}
+              onMouseLeave={(e) => stopScramble(e.currentTarget)}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              HOME
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/projects"
+              onMouseEnter={(e) => startScramble(e.currentTarget)}
+              onMouseLeave={(e) => stopScramble(e.currentTarget)}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              WORK
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              onMouseEnter={(e) => startScramble(e.currentTarget)}
+              onMouseLeave={(e) => stopScramble(e.currentTarget)}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              ABOUT
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              onMouseEnter={(e) => startScramble(e.currentTarget)}
+              onMouseLeave={(e) => stopScramble(e.currentTarget)}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              CONTACT
+            </NavLink>
+          </li>
+          <li>
+            <a
+              href="/"
+              onMouseEnter={(e) => startScramble(e.currentTarget)}
+              onMouseLeave={(e) => stopScramble(e.currentTarget)}
+            >
+              EXIT
+            </a>
+          </li>
+        </ul>
       </div>
-      <ul className="nav-links">
-        <li>
-          <NavLink
-            to="/projects"
-            onMouseEnter={(e) => startScramble(e.currentTarget)}
-            onMouseLeave={(e) => stopScramble(e.currentTarget)}
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            WORK
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/about"
-            onMouseEnter={(e) => startScramble(e.currentTarget)}
-            onMouseLeave={(e) => stopScramble(e.currentTarget)}
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            ABOUT
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/contact"
-            onMouseEnter={(e) => startScramble(e.currentTarget)}
-            onMouseLeave={(e) => stopScramble(e.currentTarget)}
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            CONTACT
-          </NavLink>
-        </li>
-      </ul>
     </nav>
   );
 }

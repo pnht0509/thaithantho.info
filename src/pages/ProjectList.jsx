@@ -148,60 +148,65 @@ export function ProjectList() {
       .replace(/-+$/, '');
   };
 
-  const handleMouseEnter = (event, id) => {
-    setActiveId(id);
-    const video = event.currentTarget.parentNode.querySelector("video");
-    if (video) {
-      video.currentTime = 0;
-      video.play().catch(() => {});
-    }
-  };
-
-  const handleMouseLeave = (event) => {
-    setActiveId(null);
-    const video = event.currentTarget.parentNode.querySelector("video");
-    if (video) {
-      video.pause();
-    }
-  };
+  const activeProject = projects.find((p) => p.id === activeId) || null;
 
   return (
-    <div className="projects-container">
-      <div className="projects-list">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className={`project-wrapper ${
-              activeId === project.id ? "active" : ""
-            }`}
-          >
-            <Link
-              to={`/project/${slugify(project.title)}`}
-              className="project-row"
-              onMouseEnter={(e) => handleMouseEnter(e, project.id)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <div className="project-info">
-                <h3 className="project-title">{project.title}</h3>
-                <span className="project-role">{project.role}</span>
-                <span className="project-type">{project.type}</span>
-                <span className="project-year">{project.year}</span>
-              </div>
-            </Link>
-
-            <div className="project-hover">
-              <div className="project-media-grid">
-                <video muted loop playsInline preload="metadata">
-                  <source src={project.video} type="video/mp4" />
-                </video>
-                {project.images && project.images.map((img, idx) => (
-                  <img key={idx} src={img} alt={`${project.title} ${idx + 1}`} />
-                ))}
-              </div>
-            </div>
+    <div className="home-root">
+      <div className="home-layout">
+        <section className="home-main">
+          <div className="projects-gallery-grid">
+            {projects.map((project) => (
+              <Link
+                key={project.id}
+                to={`/project/${slugify(project.title)}`}
+                className="projects-gallery-item"
+                onMouseEnter={() => setActiveId(project.id)}
+                onMouseLeave={() => setActiveId((prev) => (prev === project.id ? null : prev))}
+             >
+                <div className="projects-gallery-image">
+                  <img
+                    src={project.images?.[0]}
+                    alt={project.title}
+                    loading="lazy"
+                  />
+                </div>
+                <div className="projects-gallery-title">{project.title}</div>
+              </Link>
+            ))}
           </div>
-        ))}
+        </section>
+        <aside className="home-side">
+          <div className="project-hover-panel">
+            {activeProject ? (
+              <>
+                <div className="home-side-video">
+                  {activeProject.images?.[0] ? (
+                    <img src={activeProject.images[0]} alt={activeProject.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  ) : null}
+                </div>
+                <div className="project-hover-name">{activeProject.title}</div>
+                <div className="project-hover-meta">
+                  <div className="project-hover-row">
+                    <span className="label">Type</span>
+                    <span className="value">{activeProject.type}</span>
+                  </div>
+                  <div className="project-hover-row">
+                    <span className="label">Role</span>
+                    <span className="value">{activeProject.role}</span>
+                  </div>
+                  <div className="project-hover-row">
+                    <span className="label">Year</span>
+                    <span className="value">{activeProject.year}</span>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <div className="project-hover-empty">Hover a project to see details</div>
+            )}
+          </div>
+        </aside>
       </div>
+      <div className="home-footer">© thaithantho's portfolio. All Right Reserved</div>
     </div>
   );
 }

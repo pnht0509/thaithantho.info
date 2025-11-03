@@ -242,19 +242,16 @@ export function Project() {
 
     // Initialize Flickity
     const flkty = new Flickity(carouselRef.current, {
-      freeScroll: true,
+      freeScroll: false,
       wrapAround: true,
       autoPlay: false,
       prevNextButtons: false,
       pageDots: false,
-      cellAlign: 'center',
-      contain: false,
+      cellAlign: 'left',
+      contain: true,
       imagesLoaded: true,
       groupCells: false,
-      dragThreshold: 10,
-      friction: 0.1,
-      selectedAttraction: 0.001,
-      freeScrollFriction: 0.15
+      draggable: false
     });
 
     flickityInstanceRef.current = flkty;
@@ -268,92 +265,102 @@ export function Project() {
   }, [project]);
 
   const handleNext = () => {
-    if (flickityInstanceRef.current) {
-      flickityInstanceRef.current.next();
-    }
+    const flkty = flickityInstanceRef.current;
+    if (!flkty) return;
+    const nextIndex = (flkty.selectedIndex + 1) % flkty.cells.length;
+    flkty.select(nextIndex, true, true); // instant
   };
 
   const handlePrev = () => {
-    if (flickityInstanceRef.current) {
-      flickityInstanceRef.current.previous();
-    }
+    const flkty = flickityInstanceRef.current;
+    if (!flkty) return;
+    const prevIndex = (flkty.selectedIndex - 1 + flkty.cells.length) % flkty.cells.length;
+    flkty.select(prevIndex, true, true); // instant
   };
 
   if (!project) return <div>Loading...</div>;
 
   return (
-    <div className="project-page">
-      {/* Cover Image with Title */}
-      <div className="project-cover">
-        <img src={project.coverImage} alt={project.title} />
-        <div className="project-cover-overlay">
-          <h1 className="project-cover-title">{project.title.toUpperCase()}</h1>
-          <div className="project-cover-type">{project.type}</div>
-          <div className="project-cover-role">{project.role}</div>
-        </div>
-      </div>
+    <div className="home-root">
+      <div className="home-layout">
+        <section className="home-main">
+          <h2 className="project-section-heading">{project.type}</h2>
+          <h1 className="project-cover-title" style={{ position: 'static', transform: 'none', textAlign: 'left', fontSize: '26px', margin: '0 0 16px 0' }}>{project.title.toUpperCase()}</h1>
 
-      {/* Content Section */}
-      <div className="project-content">
-        <div className="project-content-main">
-          {/* Text on Left */}
-          <div className="project-text">
+          <div className="project-text" style={{ marginBottom: '24px' }}>
             <h2 className="project-section-heading">About</h2>
             <p>{project.paragraphs[0]}</p>
             <p>{project.paragraphs[1]}</p>
           </div>
 
-          {/* Video on Right */}
-          <div className="project-video">
-            <h2 className="project-section-heading">Video</h2>
-            <video controls autoPlay muted loop>
-              <source src={project.video} type="video/mp4" />
-            </video>
-          </div>
-        </div>
-
-        {/* Credits */}
-        {project.credit && (
-          <div className="project-credit">
-            <h2 className="project-section-heading">Credits</h2>
-            <p>{project.credit}</p>
-          </div>
-        )}
-
-
-      </div>
-              {/* Gallery */}
-              <div className="project-gallery">
-          <h2 className="project-section-heading">Gallery</h2>
-          <div className="project-gallery-container">
-            <button 
-              className="gallery-nav-btn gallery-nav-left"
-              onClick={handlePrev}
-              aria-label="Previous image"
-            >
-              ‹
-            </button>
-            <div className="carousel" ref={carouselRef}>
-              {project.images.map((img, idx) => (
-                <div key={idx} className="carousel-cell">
-                  <img src={img} alt={`${project.title} image ${idx + 1}`} />
-                </div>
-              ))}
+          {project.credit && (
+            <div className="project-credit" style={{ alignItems: 'flex-start' }}>
+              <h2 className="project-section-heading">Credits</h2>
+              <p>{project.credit}</p>
             </div>
-            <button 
-              className="gallery-nav-btn gallery-nav-right"
-              onClick={handleNext}
-              aria-label="Next image"
-            >
-              ›
-            </button>
-          </div>
-        </div>
+          )}
 
-      {/* Copyright */}
-      <div className="project-copyright">
-        <p>© thaithantho's portfolio. All Right Reserved</p>
+          <div className="project-gallery" style={{ marginTop: '24px' }}>
+            <h2 className="project-section-heading">Gallery</h2>
+            <div className="project-gallery-container">
+              <button 
+                className="gallery-nav-btn gallery-nav-left"
+                onClick={handlePrev}
+                aria-label="Previous image"
+              >
+                ‹
+              </button>
+              <div className="carousel" ref={carouselRef}>
+                {project.images.map((img, idx) => (
+                  <div key={idx} className="carousel-cell">
+                    <img src={img} alt={`${project.title} image ${idx + 1}`} />
+                  </div>
+                ))}
+              </div>
+              <button 
+                className="gallery-nav-btn gallery-nav-right"
+                onClick={handleNext}
+                aria-label="Next image"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <aside className="home-side">
+          <div className="project-hover-panel">
+            <div className="home-side-video">
+              <video
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              >
+                <source src={project.video} type="video/mp4" />
+              </video>
+            </div>
+            <div className="project-hover-name">{project.title}</div>
+            <div className="project-hover-meta">
+              <div className="project-hover-row">
+                <span className="label">Type</span>
+                <span className="value">{project.type}</span>
+              </div>
+              <div className="project-hover-row">
+                <span className="label">Role</span>
+                <span className="value">{project.role}</span>
+              </div>
+              <div className="project-hover-row">
+                <span className="label">Year</span>
+                <span className="value">{project.year}</span>
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
+      <div className="home-footer">© thaithantho's portfolio. All Right Reserved</div>
     </div>
   );
 }
