@@ -5,10 +5,10 @@ const projects = [
   {
     id: 1,
     title: "Ă̸̢̢ḿ̶̧͓ͅ I̶̛̐̈͠.  ̸͐̏͑̅D̴̘͈͂͝ȯ̸̟̽͛i̶͛͋̉̓n̴͂̎̒̿g̶̩̰̅͌ ̴̎͗̔͝T̴͐̒̚͠h̸͆̈̈́͝is Ri͈̯g̶͍͗̽͘h̴͌͗͆͝t̶͙̥͛́?̷̎͌",
-    role: "Creative Director",
-    type: "Web Design",
-    year: "2023",
-    video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    role: "Visual Artist",
+    type: "Video Installation",
+    year: "2025",
+    video: "https://vimeo.com/1130098714?fl=pl&fe=sh",
     images: [
       "https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
       "https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
@@ -18,10 +18,10 @@ const projects = [
   {
     id: 2,
     title: "Dominic Fike - Mama's Boy (Unofficial Video)",
-    role: "3D Animator",
-    type: "3D Animation",
-    year: "2023",
-    video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    role: "Assistant Director, Director of Photography, Editor, Colorist, VFX Artist",
+    type: "Music Video",
+    year: "2025",
+    video: "https://vimeo.com/1130100307?fl=pl&fe=sh",
     images: [
       "https://picsum.photos/seed/project2-1/800/600",
       "https://picsum.photos/seed/project2-2/800/600",
@@ -31,9 +31,9 @@ const projects = [
   {
     id: 3,
     title: "Whimsical Reality",
-    role: "Motion Graphics Designer",
-    type: "Motion Graphics",
-    year: "2022",
+    role: "Visual Artist",
+    type: "Interactive Installation",
+    year: "2025",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
     images: [
       "https://picsum.photos/seed/project3-1/800/600",
@@ -44,10 +44,10 @@ const projects = [
   {
     id: 4,
     title: "How to uncake",
-    role: "UI/UX Designer",
-    type: "UI/UX Design",
-    year: "2022",
-    video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    role: "Director, Producer, Director of Photography, Editor, Colorist, VFX Artist",
+    type: "Short Film",
+    year: "2024",
+    video: "https://vimeo.com/1081134450?fl=pl&fe=sh",
     images: [
       "https://picsum.photos/seed/project4-1/800/600",
       "https://picsum.photos/seed/project4-2/800/600",
@@ -57,9 +57,9 @@ const projects = [
   {
     id: 5,
     title: "Shape of Memories",
-    role: "Brand Identity Designer",
-    type: "Brand Identity",
-    year: "2022",
+    role: "Visual Artist",
+    type: "Video",
+    year: "2024",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
     images: [
       "https://picsum.photos/seed/project5-1/800/600",
@@ -70,10 +70,10 @@ const projects = [
   {
     id: 6,
     title: "\"Poor\" Thoughts",
-    role: "Photographer",
-    type: "Photography",
-    year: "2021",
-    video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    role: "Director, Producer, Director of Photography,Gaffer, DIT, BTS, Camera and Lighting Equipment, Editor, Colorist, VFX Artist",
+    type: "Short Film",
+    year: "2024",
+    video: "https://vimeo.com/1016752750?fl=pl&fe=sh",
     images: [
       "https://picsum.photos/seed/project6-1/800/600",
       "https://picsum.photos/seed/project6-2/800/600",
@@ -83,10 +83,10 @@ const projects = [
   {
     id: 7,
     title: "Dissolving Dimensions",
-    role: "Web Developer",
-    type: "Web Development",
-    year: "2021",
-    video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    role: "Visual Artist",
+    type: "Interactive Installation",
+    year: "2024",
+    video: "https://vimeo.com/987500507?fl=pl&fe=sh",
     images: [
       "https://picsum.photos/seed/project7-1/800/600",
       "https://picsum.photos/seed/project7-2/800/600",
@@ -96,9 +96,9 @@ const projects = [
   {
     id: 8,
     title: "Efferescent",
-    role: "Installation Artist",
-    type: "Installation",
-    year: "2021",
+    role: "Project Manager",
+    type: "Creative Project",
+    year: "2023",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
     images: [
       "https://picsum.photos/seed/project8-1/800/600",
@@ -109,9 +109,9 @@ const projects = [
   {
     id: 9,
     title: "Anybody's Anything",
-    role: "Visual Designer",
-    type: "Visual Design",
-    year: "2020",
+    role: "Videographer, Editor, Colorist",
+    type: "Music Video",
+    year: "2023",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
     images: [
       "https://picsum.photos/seed/project9-1/800/600",
@@ -122,10 +122,10 @@ const projects = [
   {
     id: 10,
     title: "Streamer",
-    role: "Interactive Designer",
-    type: "Interactive",
-    year: "2020",
-    video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    role: "Director, Director of Photography, Editor, Colorist",
+    type: "Short Film",
+    year: "2022",
+    video: "https://vimeo.com/863270629?fl=pl&fe=sh",
     images: [
       "https://picsum.photos/seed/project10-1/800/600",
       "https://picsum.photos/seed/project10-2/800/600",

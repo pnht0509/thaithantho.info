@@ -3,19 +3,17 @@ export function About() {
     <div className="home-root">
       <div className="home-layout">
         <section className="home-main">
-          <h2>ABOUT</h2>
-          <h1>WHO I AM</h1>
           <div style={{ marginTop: 16, maxWidth: 800, display: "grid", gap: 12 }}>
             <p>
-              I'm a creative professional exploring the boundaries of visual communication through
-              design, motion graphics, and interactive experiences. My work blends technical
-              expertise with artistic vision to create meaningful connections between brands and
-              their audiences.
+            Thai Phan (also known as thaithantho) is a Vietnamese visual artist based in Melbourne who creates weird, glitchy, and occasionally beautiful things using 3D, VFX, or whatever tool happens to catch his curiosity that week.
             </p>
+            <br />
             <p>
-              With a passion for innovation and storytelling, I craft experiences that resonate
-              deeply and leave lasting impressions. Each project is an opportunity to push creative
-              boundaries and explore new possibilities in the digital realm.
+            The name thaithantho is a playful fusion of his name and the Vietnamese words “than thở” or “thẫn thờ,” rhythmic expressions loosely meaning “dull” or “complaining.” It’s a self-aware roast to his younger self, a perpetually bored kid who complained about everything. That spirit of delightful pessimism still runs through his work, which often delves into digital chaos, fractured identity, and the absurdity of modern life.
+            </p>
+            <br />
+            <p>
+            Driven by a love for visual storytelling and emerging technologies, Thai’s practice sits at the intersection of art, design, and experimentation. He plays with materials, motion, and glitches, constantly trying (and occasionally failing) to make sense of the world through images. His work also extends into film, photography, sound, and graphic design, mostly because he can’t sit still.
             </p>
           </div>
         </section>
