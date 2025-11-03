@@ -159,7 +159,9 @@ export function ProjectList() {
               <Link
                 key={project.id}
                 to={`/project/${slugify(project.title)}`}
-                className="projects-gallery-item"
+                className="projects-gallery-item nav-item"
+                data-nav-item
+                tabIndex={0}
                 onMouseEnter={() => setActiveId(project.id)}
                 onMouseLeave={() => setActiveId((prev) => (prev === project.id ? null : prev))}
              >
@@ -179,11 +181,6 @@ export function ProjectList() {
           <div className="project-hover-panel">
             {activeProject ? (
               <>
-                <div className="home-side-video">
-                  {activeProject.images?.[0] ? (
-                    <img src={activeProject.images[0]} alt={activeProject.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                  ) : null}
-                </div>
                 <div className="project-hover-name">{activeProject.title}</div>
                 <div className="project-hover-meta">
                   <div className="project-hover-row">
@@ -198,6 +195,11 @@ export function ProjectList() {
                     <span className="label">Year</span>
                     <span className="value">{activeProject.year}</span>
                   </div>
+                </div>
+                <div className="home-side-video">
+                  {activeProject.images?.[0] ? (
+                    <img src={activeProject.images[0]} alt={activeProject.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  ) : null}
                 </div>
               </>
             ) : (

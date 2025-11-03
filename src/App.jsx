@@ -7,6 +7,7 @@ import { ProjectList } from "./pages/ProjectList";
 import { Navbar } from "./component/NavBar";
 
 export default function App() {
+
   return (
     <>
       <Navbar />

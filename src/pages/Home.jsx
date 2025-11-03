@@ -63,7 +63,8 @@ export function Home() {
           </div>
         </section>
         <aside className="home-side">
-          <h2>USE ARROWS OR MOUSE TO NAVIGATE</h2>
+          <h2>THAITHANTHO</h2>
+          <h2>VISUAL ARTIST</h2>
           <video
             className="home-side-video"
             autoPlay

@@ -78,7 +78,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: var(--blue); /* deep blue */
+  background: var(--blue); /* black navbar */
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -146,7 +146,7 @@ body {
 
 .home-side { border-left: 2px solid #4a4a4a; padding: var(--space-md) var(--space-md); display: flex; flex-direction: column; justify-content: flex-start; position: sticky; top: 0; align-self: start; height: calc(100vh - var(--nav-height) - var(--footer-height)); color: var(--blue); font-family: "thaithantho-2y", var(--font-family); }
 .home-side h2 { font-size: 22px; font-weight: 700; }
-.home-side-video { width: 100%; height: 300px; background: #d9d9d9; align-self: stretch; object-fit: cover; display: block; }
+.home-side-video { width: 100%; height: 300px; background: #d9d9d9; align-self: stretch; object-fit: cover; display: block; margin-top: auto; }
 
 .home-bottom-meta {
   position: absolute;
@@ -194,7 +194,7 @@ body {
 
 .projects-gallery-image {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   background: #d9d9d9;
   overflow: hidden;
 }
@@ -217,6 +217,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  flex: 1; /* allow panel to take full side height so video can stick to bottom */
+  min-height: 0;
 }
 
 .project-hover-name { font-size: 22px; font-weight: 700; margin-top: 8px; }
@@ -715,4 +717,76 @@ body {
 
 .about-text:last-child {
   margin-bottom: 0;
+}
+
+/* Contact Page Styles */
+.nav-item { outline: none; }
+.nav-item:focus-visible { background-color: #101a8a; color: #fff; }
+
+/* Larger blue focus background for navbar items with yellow text */
+.nav-links a.nav-item:focus-visible {
+  background: #000;
+  color: #ffd400; /* yellow when navigated by arrows */
+  padding: 12px 12px;
+}
+
+/* Hover matches arrow navigation visuals for navbar */
+.nav-links a.nav-item:hover {
+  background: #000;
+  color: #ffd400;
+  padding: 12px 12px;
+}
+
+/* Larger blue focus background for project tiles without shifting layout */
+.projects-gallery-item.nav-item:focus-visible {
+  box-shadow: 0 0 0 6px #101a8a;
+}
+.projects-gallery-item.nav-item:focus-visible .projects-gallery-title { color: #fff; }
+
+/* Hover matches arrow navigation visuals for project tiles */
+.projects-gallery-item.nav-item:hover {
+  box-shadow: 0 0 0 6px #101a8a;
+}
+.projects-gallery-item.nav-item:hover .projects-gallery-title { color: #fff; }
+.contact-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1600') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contact-center {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  mix-blend-mode: difference;
+  padding: 40px;
+}
+
+.contact-title {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 24px 0;
+  text-transform: uppercase;
+}
+
+.contact-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 0 0 8px 0;
+}
+
+.contact-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.contact-link:hover {
+  opacity: 0.85;
 }

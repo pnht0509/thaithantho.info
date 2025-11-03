@@ -330,18 +330,6 @@ export function Project() {
 
         <aside className="home-side">
           <div className="project-hover-panel">
-            <div className="home-side-video">
-              <video
-                controls
-                autoPlay
-                muted
-                loop
-                playsInline
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              >
-                <source src={project.video} type="video/mp4" />
-              </video>
-            </div>
             <div className="project-hover-name">{project.title}</div>
             <div className="project-hover-meta">
               <div className="project-hover-row">
@@ -356,6 +344,18 @@ export function Project() {
                 <span className="label">Year</span>
                 <span className="value">{project.year}</span>
               </div>
+            </div>
+            <div className="home-side-video">
+              <video
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              >
+                <source src={project.video} type="video/mp4" />
+              </video>
             </div>
           </div>
         </aside>

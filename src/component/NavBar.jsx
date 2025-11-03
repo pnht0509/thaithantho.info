@@ -63,7 +63,9 @@ export function Navbar() {
               to="/"
               onMouseEnter={(e) => startScramble(e.currentTarget)}
               onMouseLeave={(e) => stopScramble(e.currentTarget)}
-              className={({ isActive }) => (isActive ? "active" : "")}
+              className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}
+              data-nav-item
+              tabIndex={0}
             >
               HOME
             </NavLink>
@@ -73,7 +75,9 @@ export function Navbar() {
               to="/projects"
               onMouseEnter={(e) => startScramble(e.currentTarget)}
               onMouseLeave={(e) => stopScramble(e.currentTarget)}
-              className={({ isActive }) => (isActive ? "active" : "")}
+              className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}
+              data-nav-item
+              tabIndex={0}
             >
               WORK
             </NavLink>
@@ -83,7 +87,9 @@ export function Navbar() {
               to="/about"
               onMouseEnter={(e) => startScramble(e.currentTarget)}
               onMouseLeave={(e) => stopScramble(e.currentTarget)}
-              className={({ isActive }) => (isActive ? "active" : "")}
+              className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}
+              data-nav-item
+              tabIndex={0}
             >
               ABOUT
             </NavLink>
@@ -93,16 +99,34 @@ export function Navbar() {
               to="/contact"
               onMouseEnter={(e) => startScramble(e.currentTarget)}
               onMouseLeave={(e) => stopScramble(e.currentTarget)}
-              className={({ isActive }) => (isActive ? "active" : "")}
+              className={({ isActive }) => `nav-item${isActive ? " active" : ""}`}
+              data-nav-item
+              tabIndex={0}
             >
               CONTACT
             </NavLink>
           </li>
           <li>
             <a
-              href="/"
+              href="#exit"
               onMouseEnter={(e) => startScramble(e.currentTarget)}
               onMouseLeave={(e) => stopScramble(e.currentTarget)}
+              className="nav-item"
+              data-nav-item
+              tabIndex={0}
+              onClick={(e) => {
+                e.preventDefault();
+                try {
+                  window.open('', '_self');
+                  window.close();
+                  setTimeout(() => {
+                    try { window.close(); } catch {}
+                    try { window.location.replace('about:blank'); } catch {}
+                  }, 50);
+                } catch {
+                  try { window.location.replace('about:blank'); } catch {}
+                }
+              }}
             >
               EXIT
             </a>
