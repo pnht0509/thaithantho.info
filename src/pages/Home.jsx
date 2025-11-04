@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import outputGif from "../assets/output.gif";
 
 export function Home() {
   const [locationText, setLocationText] = useState("SYSTEM LOCATION");
@@ -65,13 +66,10 @@ export function Home() {
         <aside className="home-side">
           <h2>THAITHANTHO</h2>    
           <h2>VISUAL ARTIST</h2>
-          <video
+          <img
             className="home-side-video"
-            autoPlay
-            muted
-            loop
-            playsInline
-            src="https://assets.mixkit.co/videos/3524/3524-720.mp4"
+            src={outputGif}
+            alt="Visual artist animation"
           />
         </aside>
       </div>
