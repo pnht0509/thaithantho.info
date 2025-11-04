@@ -225,7 +225,8 @@ Special thanks to Buu Nguyen, Quynh Nguyen, Ngan Nguyen, Duy Vo, My Le, Jessie S
     role: "Project Manager",
     type: "Creative Project",
     year: "2023",
-    video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    video: "",
+    embedIframeSrc: "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FRMITMASSMEDIA%2Fvideos%2F659986486116648%2F&show_text=false&width=560&t=0",
     images: [
       "https://picsum.photos/seed/project8-1/800/600",
       "https://picsum.photos/seed/project8-2/800/600",
@@ -416,6 +417,18 @@ export function Project() {
             </div>
             <div className="home-side-video">
               {(() => {
+                if (project.embedIframeSrc) {
+                  return (
+                    <iframe
+                      src={project.embedIframeSrc}
+                      style={{ width: '100%', height: '100%', display: 'block', border: '0' }}
+                      scrolling="no"
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                      allowFullScreen
+                      title={`${project.title} video`}
+                    />
+                  );
+                }
                 const isVimeo = typeof project.video === 'string' && project.video.includes('vimeo.com');
                 if (isVimeo) {
                   const match = project.video.match(/vimeo\.com\/(\d+)/);

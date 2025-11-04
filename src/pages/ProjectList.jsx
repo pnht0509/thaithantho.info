@@ -10,9 +10,7 @@ const projects = [
     year: "2025",
     video: "https://vimeo.com/1130098714?fl=pl&fe=sh",
     images: [
-      "https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
-      "https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
-      "https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+      "https://imagedelivery.net/9e6F9WGVMKEgqvozZdl8wA/a64d4e7b-07fb-4eb7-c41d-5b6df557a700/public"
     ],
   },
   {
@@ -23,9 +21,7 @@ const projects = [
     year: "2025",
     video: "https://vimeo.com/1130100307?fl=pl&fe=sh",
     images: [
-      "https://picsum.photos/seed/project2-1/800/600",
-      "https://picsum.photos/seed/project2-2/800/600",
-      "https://picsum.photos/seed/project2-3/800/600",
+      "https://imagedelivery.net/9e6F9WGVMKEgqvozZdl8wA/d881a9fe-6bbf-4774-f9a5-f4b2c8330500/public"
     ],
   },
   {
@@ -36,9 +32,7 @@ const projects = [
     year: "2025",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
     images: [
-      "https://picsum.photos/seed/project3-1/800/600",
-      "https://picsum.photos/seed/project3-2/800/600",
-      "https://picsum.photos/seed/project3-3/800/600",
+      "https://imagedelivery.net/9e6F9WGVMKEgqvozZdl8wA/0512e5d6-3674-4bf8-1007-b0f1d5f9a100/public"
     ],
   },
   {
@@ -49,9 +43,7 @@ const projects = [
     year: "2024",
     video: "https://vimeo.com/1081134450?fl=pl&fe=sh",
     images: [
-      "https://picsum.photos/seed/project4-1/800/600",
-      "https://picsum.photos/seed/project4-2/800/600",
-      "https://picsum.photos/seed/project4-3/800/600",
+      "https://imagedelivery.net/9e6F9WGVMKEgqvozZdl8wA/5be63215-9cc1-4e08-ca80-6b09654dfd00/public"
     ],
   },
   {
@@ -62,9 +54,7 @@ const projects = [
     year: "2024",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
     images: [
-      "https://picsum.photos/seed/project5-1/800/600",
-      "https://picsum.photos/seed/project5-2/800/600",
-      "https://picsum.photos/seed/project5-3/800/600",
+      "https://imagedelivery.net/9e6F9WGVMKEgqvozZdl8wA/88002fa4-db50-4d71-7589-6c1d5fa7bd00/public"
     ],
   },
   {
@@ -75,9 +65,7 @@ const projects = [
     year: "2024",
     video: "https://vimeo.com/1016752750?fl=pl&fe=sh",
     images: [
-      "https://picsum.photos/seed/project6-1/800/600",
-      "https://picsum.photos/seed/project6-2/800/600",
-      "https://picsum.photos/seed/project6-3/800/600",
+      "https://imagedelivery.net/9e6F9WGVMKEgqvozZdl8wA/37f62955-b4d4-49b3-d50b-1105e0e5ea00/public"
     ],
   },
   {
@@ -88,9 +76,7 @@ const projects = [
     year: "2024",
     video: "https://vimeo.com/987500507?fl=pl&fe=sh",
     images: [
-      "https://picsum.photos/seed/project7-1/800/600",
-      "https://picsum.photos/seed/project7-2/800/600",
-      "https://picsum.photos/seed/project7-3/800/600",
+      "https://imagedelivery.net/9e6F9WGVMKEgqvozZdl8wA/e30264a6-5cc2-4cd4-68e2-88c3f1063800/public"
     ],
   },
   {
@@ -101,9 +87,7 @@ const projects = [
     year: "2023",
     video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
     images: [
-      "https://picsum.photos/seed/project8-1/800/600",
-      "https://picsum.photos/seed/project8-2/800/600",
-      "https://picsum.photos/seed/project8-3/800/600",
+      "https://imagedelivery.net/9e6F9WGVMKEgqvozZdl8wA/05890729-9ead-483a-36d2-46c7fdcb4800/public"
     ],
   },
   {
@@ -112,11 +96,9 @@ const projects = [
     role: "Videographer, Editor, Colorist",
     type: "Music Video",
     year: "2023",
-    video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    video: "https://vimeo.com/947821180",
     images: [
-      "https://picsum.photos/seed/project9-1/800/600",
-      "https://picsum.photos/seed/project9-2/800/600",
-      "https://picsum.photos/seed/project9-3/800/600",
+      "https://imagedelivery.net/9e6F9WGVMKEgqvozZdl8wA/76999b20-521c-42a4-5a69-f295518b5a00/public"
     ],
   },
   {
@@ -127,9 +109,7 @@ const projects = [
     year: "2022",
     video: "https://vimeo.com/863270629?fl=pl&fe=sh",
     images: [
-      "https://picsum.photos/seed/project10-1/800/600",
-      "https://picsum.photos/seed/project10-2/800/600",
-      "https://picsum.photos/seed/project10-3/800/600",
+      "https://imagedelivery.net/9e6F9WGVMKEgqvozZdl8wA/7ccbb836-e3db-4eb6-4588-735f2735a600/public"
     ],
   },
 ];
