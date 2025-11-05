@@ -4,6 +4,7 @@ import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { Project } from "./pages/Project";
 import { ProjectList } from "./pages/ProjectList";
+import { NotFound } from "./pages/NotFound";
 import { Navbar } from "./component/NavBar";
 
 export default function App() {
@@ -17,7 +18,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<ProjectList />} />
         <Route path="/project/:slug" element={<Project />} />
-        <Route />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
