@@ -67,8 +67,7 @@ export function Home() {
           <h2>VISUAL ARTIST</h2>
           <div className="home-side-video" style={{ position: 'relative', paddingTop: '56.25%' }}>
             <iframe
-              src="https://customer-y5wgl1yi7h7mp8sa.cloudflarestream.com/52f4d688c8b63dd6c6d8e5e2b17e4ca1/iframe?muted=true&preload=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-y5wgl1yi7h7mp8sa.cloudflarestream.com%2F52f4d688c8b63dd6c6d8e5e2b17e4ca1%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&controls=false"
-              loading="lazy"
+              src="https://customer-y5wgl1yi7h7mp8sa.cloudflarestream.com/c55bfa2754d1eb208a3ddcd38ab1a322/iframe?muted=true&preload=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-y5wgl1yi7h7mp8sa.cloudflarestream.com%2Fc55bfa2754d1eb208a3ddcd38ab1a322%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&controls=false"
               style={{ border: 'none', position: 'absolute', top: 0, left: 0, height: '100%', width: '100%' }}
               allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
               allowFullScreen={true}
