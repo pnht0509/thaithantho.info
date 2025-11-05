@@ -16,12 +16,12 @@ const projects = [
       "https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
       "https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
     ],
-    coverImage: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200",
+    coverImage: "",
     paragraphs: [
       "Am I Doing It Right? is a generative audiovisual system that embodies the creative anxiety many artists experience, the self-doubt and questioning that often accompany the artistic process. The system continually questions itself, loops endlessly, and exists in a state of digital uncertainty. The project is presented through a CRT television to evoke nostalgia and imperfection, emphasizing its analog and human qualities.",
       "An infinite loop of generative anxiety run autonomously for 2 to 2.5 minutes each cycle. There's no human input during the process, each run produces a new work of art born from frest doubts and shifting states of creativity."
     ],
-    credit: "Creative Director: thaithantho | Developer: John Doe | Sound Design: Jane Smith"
+    // credit: "Creative Director: thaithantho | Developer: John Doe | Sound Design: Jane Smith"
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ const projects = [
       "https://picsum.photos/seed/project3-2/800/600",
       "https://picsum.photos/seed/project3-3/800/600",
     ],
-    coverImage: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200",
+    coverImage: "",
     paragraphs: [
       "The mama’s boy music video explores themes of grief and remembrance as we change the audience’s perception of the lyrics in this complementary narrative. Our interpretation of ‘Mama’s Boy’ and its lyrics are illustrated through the perspective of a son whose parents have passed away and he is dealing with the grief of it all. The video particularly focuses on the memories of the dead mother and how her life and personality is reflected in her son. The goal was to depict the life of the parents when they were the same age as the son is now to highlight similarities. Although she is gone, he is spiritually closer to her than he thinks.",
       "This music video has been produced as part of the course The Spectacle of Music Video: From MTV to YouTube and is intended solely for educational and non-commercial purposes. All rights to the original music, lyrics, and recordings remain the property of their respective copyright owners. The inclusion of this material is for the purposes of study, analysis, and scholarly practice under the principles of fair use. No copyright infringement is intended."
@@ -75,7 +75,7 @@ Special thanks to Heiniken, Vaseline, Corona, Hungry Jack's, Woollies, Kellogg's
     role: "Visual Artist",
     type: "Interactive Installation",
     year: "2025",
-    video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+    video: "https://youtu.be/arwkk71HpEw",
     images: [
       "https://picsum.photos/seed/project3-1/800/600",
       "https://picsum.photos/seed/project3-2/800/600",
@@ -83,8 +83,11 @@ Special thanks to Heiniken, Vaseline, Corona, Hungry Jack's, Woollies, Kellogg's
     ],
     coverImage: "https://images.unsplash.com/photo-1563089145-599997674d11?w=1200",
     paragraphs: [
-      "A creative exploration of motion graphics that blends reality with imagination through fluid animations and dynamic visual storytelling.",
-      "This project demonstrates the power of motion design to create engaging narratives that captivate and inspire audiences."
+      "This project is a realtime interactive work that will generates AI images mirroring people interactions. This will create an immersive experience. The audience will step into a playful and surreal immersive world that responds to their presence and imaginations.",
+
+      "The concepts of whimsical and weird reality explore the intricate interplay between the fantastical and the mundane, creating a unique fusion that challenges conventional boundaries of perception and imagination. Whimsy introduces elements of lightheartedness, unpredictability, and charm, often evoking a sense of wonder and delight. In contrast, the weird delves into the uncanny, unsettling, or surreal, pushing the limits of what is considered normal or logical. Together, these ideas transform everyday experiences by infusing them with extraordinary qualities, encouraging viewers or participants to question their understanding of reality.",
+      
+      "This blending often manifests in art, literature, and media, where ordinary settings are imbued with magical or bizarre elements. By merging the familiar with the fantastical, whimsical and weird realities invite audiences to step outside their comfort zones and embrace imaginative possibilities. This interplay continues to inspire creators and thinkers across disciplines, offering endless opportunities to reimagine the world around us."
     ]
   },
   {
@@ -99,10 +102,9 @@ Special thanks to Heiniken, Vaseline, Corona, Hungry Jack's, Woollies, Kellogg's
       "https://picsum.photos/seed/project4-2/800/600",
       "https://picsum.photos/seed/project4-3/800/600",
     ],
-    coverImage: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200",
+    coverImage: "",
     paragraphs: [
-      "An innovative UI/UX design project that reimagines digital interfaces through thoughtful user experience and intuitive interactions.",
-      "The design philosophy centers on simplicity and functionality, creating seamless experiences that feel natural and effortless for users."
+      "Our project centers on the theme “Uncanny”, reimagining a simple cooking video into something disturbingly surreal through sound, lighting, and color manipulation."
     ],
     credit: `Cast: Buu Nguyen
 
@@ -144,10 +146,10 @@ Special thanks to Buu Nguyen, Khiem Tang, RMIT University`
       "https://picsum.photos/seed/project5-2/800/600",
       "https://picsum.photos/seed/project5-3/800/600",
     ],
-    coverImage: "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=1200",
+    coverImage: "",
     paragraphs: [
-      "A brand identity project that captures the essence of memory through evocative visual design and compelling brand narratives.",
-      "The identity system is built on the foundation of emotional connection, using design as a bridge between brands and their communities."
+      "Shapes of Memories is an audiovisual project that explores the formation of memories through distinct shapes. Using various audiovisual elements, this work aims to activate memories, highlighting the dynamic relationship between sound and visual stimuli to evoke both personal and collective recollections. Shapes of Memories features a blend of ambient and electronic sounds alongside deconstructed visuals, creating a surreal and immersive experience for the audience. This combination enhances sensory engagement and deepens the exploration of how memories are intricately woven into our experiences.",
+      "The project delves into how memories are constructed, deconstructed, and reconstructed through audiovisual media. It challenges traditional narratives by presenting memory as a fluid and fragmented experience rather than a linear recollection of past events."
     ]
   },
   {
@@ -162,10 +164,10 @@ Special thanks to Buu Nguyen, Khiem Tang, RMIT University`
       "https://picsum.photos/seed/project6-2/800/600",
       "https://picsum.photos/seed/project6-3/800/600",
     ],
-    coverImage: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1200",
+    coverImage: "",
     paragraphs: [
-      "A photographic series that explores vulnerability and human emotion through intimate portraits and thought-provoking compositions.",
-      "Each image tells a story of resilience and introspection, capturing moments of quiet contemplation and honest expression."
+      "Our endeavor will be a narrative experiment that mostly utilizes visual effects. The so-called short film tells the tale of a teenager's irrational thinking around three in the morning, which could eventually lead to the trippiest experiment that is seen on screen.",
+      "The work will be titled \"Poor Thoughts\" and will focus on the themes of \"Growth, Chaos, and Evolution\". The story's theme is that the main character is around our age and is about to take the crucial shift from adolescence to maturity. The visual will be a companion piece that aims to express the fundamental subject of the narrative diversely and more ambitiously, allowing viewers to build their perspective of the story."
     ],
     credit: `Cast: Buu Nguyen, Quynh Nguyen
 
@@ -213,16 +215,17 @@ Special thanks to Buu Nguyen, Quynh Nguyen, Ngan Nguyen, Duy Vo, My Le, Jessie S
       "https://picsum.photos/seed/project7-2/800/600",
       "https://picsum.photos/seed/project7-3/800/600",
     ],
-    coverImage: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200",
+    coverImage: "",
     paragraphs: [
-      "A cutting-edge web development project that breaks down traditional boundaries through innovative technical solutions and creative coding.",
-      "This project pushes the limits of what's possible on the web, creating immersive digital experiences that blur the line between reality and the digital realm."
+      "Dissolving Dimensions is an interactive installation that brings you to a digital world of vibrant cities via interactive and immersive experiences. Viewers can explore common spaces and feel the pulse of daily existence in every distinct area.",
+
+      "Melbourne’s CBD stands as a vibrant melting pot of cultures, a dynamic tapestry woven from countless threads of heritage, tradition, and modernity. Through the use of 3D scanning technology, this familiar urban reality is reimagined and dissolved, transforming into a mesmerizing constellation of points that invites audiences to explore and interact within a digital reflection of the city’s diversity."
     ]
   },
   {
     id: 8,
     title: "Efferescent",
-    role: "Project Manager",
+    role: "Project Manager, Director of Photography, Videographer, Editor, Colorist",
     type: "Creative Project",
     year: "2023",
     video: "",
@@ -232,11 +235,56 @@ Special thanks to Buu Nguyen, Quynh Nguyen, Ngan Nguyen, Duy Vo, My Le, Jessie S
       "https://picsum.photos/seed/project8-2/800/600",
       "https://picsum.photos/seed/project8-3/800/600",
     ],
-    coverImage: "https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=1200",
+    coverImage: "",
     paragraphs: [
-      "An immersive installation project that transforms spaces through light, sound, and interactive elements.",
-      "The installation creates an otherworldly experience that invites viewers to explore the boundaries between art, technology, and human perception."
-    ]
+      "EFFERVESCENT tells the story of a mermaid who is curious about the outside world, but can her journey be as fairytale-like as she imagines? Or will the dark side of society lead her down a different path in this unfamiliar land? "
+    ],
+    credit: `Project Manager: thaithantho, Pat Phuong, Vo Duy
+
+Videographer: thaithantho
+
+Editor: thaithantho
+
+Colorist: thaithantho
+
+Project Leader: Nguyen Trong Lam
+
+Project Assistant: Pham Viet, Quoc Buu
+
+Director: Hoang Lan
+
+Producer: Pham Viet
+
+Producer Assistant:  Quynh Huong
+
+D.O.P: thaithantho
+
+Creative Director & Screenwriter: Hoang Lan, Quoc Buu
+
+Art Director: Pat Phuong
+
+Assistant Producer: Quoc Buu
+
+Photographer: Nguyen Trong Lam, Ta Khanh Linh, Quoc Buu, Hoang Lan, Linh Le, Huynh Nhu, Binh Quoc
+Camera Operator: Vo Duy, Quoc Buu, Trang Pham, Viet Tai Chinh
+
+Set Dresser: Bong Meo, Quynh Huong, Bao Lan
+
+Storyboard: Hoang Lan
+
+Editor: Pat Phuong, Nguyen Trong Lam, Ta Khanh Linh, Manh Le, Trang Pham, Viet Tai Chinh, Quoc Buu
+
+Assistant Editor: Vo Duy
+
+Graphic Designer: Pham Viet, Manh Le, Trang Pham, Hoang Lan, Quynh Huong, Viet Pham, Bong Meo, Bao Lan
+
+Sound Design: Viet Tai Chinh
+
+Colourist: thaithantho, Hoang Lan
+
+Music: Like Someone In Love (Björk)
+
+Advisor: thaithantho, Pat Phuong, Vo Duy, Khanh Duy, Luu Duc Lam`
   },
   {
     id: 9,
@@ -244,17 +292,36 @@ Special thanks to Buu Nguyen, Quynh Nguyen, Ngan Nguyen, Duy Vo, My Le, Jessie S
     role: "Videographer, Editor, Colorist",
     type: "Music Video",
     year: "2023",
-    video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
-    images: [
-      "https://picsum.photos/seed/project9-1/800/600",
-      "https://picsum.photos/seed/project9-2/800/600",
-      "https://picsum.photos/seed/project9-3/800/600",
-    ],
-    coverImage: "https://images.unsplash.com/photo-1561825514-f0fd38ad4bc6?w=1200",
+    video: "https://vimeo.com/947821180",
+    teaserVideo: "https://vimeo.com/1014373463?fl=pl&fe=sh",
+    images: [],
+    coverImage: "",
     paragraphs: [
-      "A versatile visual design project that celebrates the freedom of creative expression without boundaries or limitations.",
-      "The design system is built on flexibility and adaptability, allowing for endless interpretations and applications across various media."
-    ]
+      "A teaser and music video created for a major music event featuring artists such as Hoang Thuy Linh, Double 2T, Wean, Changg, and MC Khiemslay, attracting an audience of over 300 guests."
+    ],
+    credit: `Music: Turnover - Dizzy On The Comedown
+
+Written: Lam Luu
+
+Directed: Lam Luu and Nghia Nguyen
+
+Assistant Director: Hoang Duy
+
+Producer: Khanh Duy
+
+DOP: Lam Luu, Thai Phan
+
+Cam OP: Thai Phan
+
+Art Director: Pat Phuong
+
+Photographer: Lam Nguyen
+
+BTS by Jason Vo
+
+Editor: Lam Luu, Thai Phan
+
+Colorist: Thai Phan`
   },
   {
     id: 10,
@@ -268,10 +335,9 @@ Special thanks to Buu Nguyen, Quynh Nguyen, Ngan Nguyen, Duy Vo, My Le, Jessie S
       "https://picsum.photos/seed/project10-2/800/600",
       "https://picsum.photos/seed/project10-3/800/600",
     ],
-    coverImage: "https://images.unsplash.com/photo-1562577309-4932afbd2dc2?w=1200",
+    coverImage: "", 
     paragraphs: [
-      "An interactive design project that explores the flow and movement of digital content through dynamic user engagement.",
-      "This project creates immersive experiences where users become active participants, shaping the narrative through their interactions and choices."
+      "This short film follows a young man determined to pursue his dream of becoming a streamer despite his family’s strong disapproval. As his passion for online content creation grows, he must confront the tension between personal ambition and familial expectations."
     ],
     credit: `Cast: Huy Pham, Huy Nguyen
 
@@ -373,27 +439,50 @@ export function Project() {
           <div className="project-gallery" style={{ marginTop: '24px' }}>
             <h2 className="project-section-heading">Gallery</h2>
             <div className="project-gallery-container">
-              <button 
-                className="gallery-nav-btn gallery-nav-left"
-                onClick={handlePrev}
-                aria-label="Previous image"
-              >
-                ‹
-              </button>
-              <div className="carousel" ref={carouselRef}>
-                {project.images.map((img, idx) => (
-                  <div key={idx} className="carousel-cell">
-                    <img src={img} alt={`${project.title} image ${idx + 1}`} />
+              {project.teaserVideo ? (
+                <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
+                  {(() => {
+                    const match = project.teaserVideo.match(/vimeo\.com\/(\d+)/);
+                    const vimeoId = match?.[1];
+                    const embedUrl = vimeoId
+                      ? `https://player.vimeo.com/video/${vimeoId}?autoplay=0&muted=0&loop=0&byline=0&title=0&portrait=0&controls=1`
+                      : project.teaserVideo;
+                    return (
+                      <iframe
+                        src={embedUrl}
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                        allowFullScreen
+                        title={`${project.title} teaser`}
+                      />
+                    );
+                  })()}
+                </div>
+              ) : (
+                <>
+                  <button 
+                    className="gallery-nav-btn gallery-nav-left"
+                    onClick={handlePrev}
+                    aria-label="Previous image"
+                  >
+                    ‹
+                  </button>
+                  <div className="carousel" ref={carouselRef}>
+                    {project.images.map((img, idx) => (
+                      <div key={idx} className="carousel-cell">
+                        <img src={img} alt={`${project.title} image ${idx + 1}`} />
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-              <button 
-                className="gallery-nav-btn gallery-nav-right"
-                onClick={handleNext}
-                aria-label="Next image"
-              >
-                ›
-              </button>
+                  <button 
+                    className="gallery-nav-btn gallery-nav-right"
+                    onClick={handleNext}
+                    aria-label="Next image"
+                  >
+                    ›
+                  </button>
+                </>
+              )}
             </div>
           </div>
         </section>
@@ -441,6 +530,24 @@ export function Project() {
                       src={embedUrl}
                       style={{ width: '100%', height: '100%', display: 'block', border: '0' }}
                       allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                      allowFullScreen
+                      title={`${project.title} video`}
+                    />
+                  ) : null;
+                }
+                const isYouTube = typeof project.video === 'string' && (project.video.includes('youtube.com') || project.video.includes('youtu.be'));
+                if (isYouTube) {
+                  const idFromShort = project.video.match(/youtu\.be\/([\w-]+)/)?.[1];
+                  const idFromWatch = project.video.match(/[?&]v=([\w-]+)/)?.[1];
+                  const ytId = idFromShort || idFromWatch;
+                  const embedUrl = ytId
+                    ? `https://www.youtube.com/embed/${ytId}?autoplay=1&mute=1&loop=1&playlist=${ytId}&controls=1&modestbranding=1&rel=0`
+                    : undefined;
+                  return embedUrl ? (
+                    <iframe
+                      src={embedUrl}
+                      style={{ width: '100%', height: '100%', display: 'block', border: '0' }}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
                       title={`${project.title} video`}
                     />
