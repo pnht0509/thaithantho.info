@@ -178,26 +178,11 @@ body {
   font-size: 12px;
 }
 
-/* ProjectList: Grid layout */
-.projects-list-layout {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - var(--nav-height) - var(--footer-height));
-  padding-top: var(--nav-height);
-  background: #b3b3b3;
-}
-
-.projects-list-main {
-  flex: 1;
-  padding: var(--space-md);
-}
-
+/* ProjectList: Home-like layout specific elements */
 .projects-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  max-width: 1400px;
-  margin: 0 auto;
 }
 
 /* Mobile layout adjustments */
@@ -261,13 +246,17 @@ body {
     margin-top: auto; /* push footer to bottom when content is short */
   }
 
-  /* Projects list mobile layout */
-  .projects-list-layout {
-    min-height: calc(100vh - var(--nav-height));
+  /* Projects list mobile layout - 2 column grid, hide sidebar */
+  .home-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .home-side {
+    display: none;
   }
 
   .projects-gallery-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
 }

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const projects = [
@@ -114,6 +115,8 @@ const projects = [
 ];
 
 export function ProjectList() {
+  const [activeId, setActiveId] = useState(null);
+
   const slugify = (text) => {
     return text
       .toString()
@@ -125,10 +128,12 @@ export function ProjectList() {
       .replace(/-+$/, '');
   };
 
+  const activeProject = projects.find((p) => p.id === activeId) || null;
+
   return (
     <div className="home-root">
-      <div className="projects-list-layout">
-        <section className="projects-list-main">
+      <div className="home-layout">
+        <section className="home-main">
           <div className="projects-gallery-grid">
             {projects.map((project) => (
               <Link
@@ -137,6 +142,8 @@ export function ProjectList() {
                 className="projects-gallery-item nav-item"
                 data-nav-item
                 tabIndex={0}
+                onMouseEnter={() => setActiveId(project.id)}
+                onMouseLeave={() => setActiveId((prev) => (prev === project.id ? null : prev))}
              >
                 <div className="projects-gallery-image">
                   <img
@@ -150,6 +157,32 @@ export function ProjectList() {
             ))}
           </div>
         </section>
+        <aside className="home-side">
+          <div className="project-hover-panel">
+            {activeProject ? (
+              <>
+                <div className="project-hover-name">{activeProject.title}</div>
+                <div className="project-hover-meta">
+                  <div className="project-hover-row">
+                    <span className="label">Type</span>
+                    <span className="value">{activeProject.type}</span>
+                  </div>
+                  <div className="project-hover-row">
+                    <span className="label">Year</span>
+                    <span className="value">{activeProject.year}</span>
+                  </div>
+                </div>
+                <div className="home-side-video">
+                  {activeProject.images?.[0] ? (
+                    <img src={activeProject.images[0]} alt={activeProject.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  ) : null}
+                </div>
+              </>
+            ) : (
+              <div className="project-hover-empty">Hover a project to see details</div>
+            )}
+          </div>
+        </aside>
       </div>
       <div className="home-footer">© thaithantho's portfolio. All Right Reserved</div>
     </div>
