@@ -66,12 +66,10 @@ export function Home() {
           <h2>THAITHANTHO</h2>    
           <h2>VISUAL ARTIST</h2>
           <div className="home-side-video" style={{ position: 'relative', paddingTop: '56.25%' }}>
-            <iframe
-              src="https://customer-y5wgl1yi7h7mp8sa.cloudflarestream.com/c55bfa2754d1eb208a3ddcd38ab1a322/iframe?muted=true&preload=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-y5wgl1yi7h7mp8sa.cloudflarestream.com%2Fc55bfa2754d1eb208a3ddcd38ab1a322%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&controls=false"
-              style={{ border: 'none', position: 'absolute', top: 0, left: 0, height: '100%', width: '100%' }}
-              allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-              allowFullScreen={true}
-              title="Visual artist video"
+            <img
+              src="https://thaithantho.info/logo.gif"
+              alt="thaithantho logo animation"
+              style={{ position: 'absolute', top: 0, left: 0, height: '100%', width: '100%', objectFit: 'cover', display: 'block', border: '0' }}
             />
           </div>
         </aside>
