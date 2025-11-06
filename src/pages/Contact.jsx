@@ -10,7 +10,7 @@ export function Contact() {
             loop
             playsInline
           >
-            <source src="https://thaithantho.info/Timeline1.mp4" type="video/mp4" />
+            <source src="https://files.thaithantho.info/Timeline1.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
@@ -18,13 +18,16 @@ export function Contact() {
         <h1 className="contact-title">GET IN TOUCH</h1>
         {/* <p className="contact-text">For collaborations, commissions, or inquiries:</p> */}
         <p className="contact-text">
-          <a href="mailto:pnht.work@gmail.com" className="contact-link">pnht.work@gmail.com</a>
+          Email: <a href="mailto:pnht.work@gmail.com" className="contact-link">pnht.work@gmail.com</a>
         </p>
         <p className="contact-text">
-          <a href="https://www.instagram.com/pnhthai/" target="_blank" rel="noreferrer" className="contact-link">@pnhthai</a>
+          Instagram: <a href="https://www.instagram.com/pnhthai/" target="_blank" rel="noreferrer" className="contact-link">@pnhthai</a>
         </p>
         <p className="contact-text">
-          <a href="https://www.linkedin.com/in/pnht/" target="_blank" rel="noreferrer" className="contact-link">Linkedin</a>
+          LinkedIn: <a href="https://www.linkedin.com/in/pnht/" target="_blank" rel="noreferrer" className="contact-link">Thai Phan</a>
+        </p>
+        <p className="contact-text">
+          CV: <a href="https://files.thaithantho.info/Thai%20Phan%20Resume.pdf" target="_blank" rel="noreferrer" className="contact-link">Resume.pdf</a>
         </p>
         <p className="contact-text">Melbourne, Australia</p>
       </div>

@@ -51,8 +51,15 @@ export function Home() {
     <div className="home-root">
       <div className="home-layout">
         <section className="home-main">
+        <div style={{ marginTop: 16, maxWidth: 800, display: "grid", gap: 12 }}>
           <h2>SYSTEM OVERVIEW</h2>
-          <h1>THAITHANTHO IS A VISUAL ARTIST BASED IN MELBOURNE</h1>
+          <div style={{ display: "grid", gap: 8, marginBottom: 16 }}>
+            <p><strong>Name:</strong> Thai Phan (aka thaithantho)</p>
+            <p><strong>Location:</strong> Melbourne</p>
+            <p><strong>Occupation:</strong> Visual Artist</p>
+            <p><strong>Capabilities:</strong> 3D, VFX, Film, Photography, Sound, Design</p>
+            <p><strong>Function:</strong> Creates experimental visuals exploring digital chaos, identity, and society</p>
+          </div>
           <div className="home-bottom-meta">
             <div className="meta-grid">
               <div className="label">SYSTEM LOCATION</div>
@@ -61,13 +68,21 @@ export function Home() {
               <div className="value">{timeText}</div>
             </div>
           </div>
+        </div>
         </section>
-        <aside className="home-side">
-          <h2>THAITHANTHO</h2>    
+        <aside className="home-side"> 
+          <div style={{paddingTop: 16}}>
           <h2>VISUAL ARTIST</h2>
+          <h2>3D</h2>
+          <h2>VFX</h2>
+          <h2>Film</h2>
+          <h2>Photography</h2>
+          <h2>Sound</h2>
+          <h2>Design</h2> 
+          </div>
           <div className="home-side-video" style={{ position: 'relative', paddingTop: '56.25%' }}>
             <img
-              src="https://thaithantho.info/logo.gif"
+              src="https://files.thaithantho.info/logo.gif"
               alt="thaithantho logo animation"
               style={{ position: 'absolute', top: 0, left: 0, height: '100%', width: '100%', objectFit: 'cover', display: 'block', border: '0' }}
             />

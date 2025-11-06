@@ -12,9 +12,9 @@ const projects = [
     year: "2025",
     video: "https://vimeo.com/1130098714?fl=pl&fe=sh",
     images: [
-      "https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
-      "https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
-      "https://plus.unsplash.com/premium_photo-1760631324997-394b4fef96c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+      "https://files.thaithantho.info/am_i_doing_this_right_1.png",
+      "https://files.thaithantho.info/am_i_doing_this_right_2.png",
+      "https://files.thaithantho.info/am_i_doing_this_right_3.png",
     ],
     coverImage: "",
     paragraphs: [
@@ -31,12 +31,22 @@ const projects = [
     year: "2025",
     video: "https://vimeo.com/1130100307?fl=pl&fe=sh",
     images: [
-      "https://picsum.photos/seed/project2-1/800/600",
-      "https://picsum.photos/seed/project2-2/800/600",
-      "https://picsum.photos/seed/project2-3/800/600",
-      "https://picsum.photos/seed/project3-1/800/600",
-      "https://picsum.photos/seed/project3-2/800/600",
-      "https://picsum.photos/seed/project3-3/800/600",
+      "https://files.thaithantho.info/mama_boy_1.png",
+      "https://files.thaithantho.info/mama_boy_2.png",
+      "https://files.thaithantho.info/mama_boy_3.png",
+      "https://files.thaithantho.info/mama_boy_4.png",
+      "https://files.thaithantho.info/mama_boy_5.png",
+      "https://files.thaithantho.info/mama_boy_6.png",
+      "https://files.thaithantho.info/mama_boy_7.png",
+      "https://files.thaithantho.info/mama_boy_8.png",  
+      "https://files.thaithantho.info/mama_boy_9.png",
+      "https://files.thaithantho.info/mama_boy_10.png",
+      "https://files.thaithantho.info/mama_boy_11.png",
+      "https://files.thaithantho.info/mama_boy_12.png",
+      "https://files.thaithantho.info/mama_boy_13.png",
+      "https://files.thaithantho.info/mama_boy_14.png",
+      "https://files.thaithantho.info/mama_boy_15.png",
+      "https://files.thaithantho.info/mama_boy_16.png"
     ],
     coverImage: "",
     paragraphs: [
@@ -77,11 +87,13 @@ Special thanks to Heiniken, Vaseline, Corona, Hungry Jack's, Woollies, Kellogg's
     year: "2025",
     video: "https://youtu.be/arwkk71HpEw",
     images: [
-      "https://picsum.photos/seed/project3-1/800/600",
-      "https://picsum.photos/seed/project3-2/800/600",
-      "https://picsum.photos/seed/project3-3/800/600",
+      "https://files.thaithantho.info/whimsical_reality_1.png",
+      "https://files.thaithantho.info/whimsical_reality_2.png",
+      "https://files.thaithantho.info/whimsical_reality_3.png",
+      "https://files.thaithantho.info/whimsical_reality_4.png",
+      "https://files.thaithantho.info/whimsical_reality_5.png"
     ],
-    coverImage: "https://images.unsplash.com/photo-1563089145-599997674d11?w=1200",
+    coverImage: "",
     paragraphs: [
       "This project is a realtime interactive work that will generates AI images mirroring people interactions. This will create an immersive experience. The audience will step into a playful and surreal immersive world that responds to their presence and imaginations.",
 
@@ -98,9 +110,20 @@ Special thanks to Heiniken, Vaseline, Corona, Hungry Jack's, Woollies, Kellogg's
     year: "2024",
     video: "https://vimeo.com/1081134450?fl=pl&fe=sh",
     images: [
-      "https://picsum.photos/seed/project4-1/800/600",
-      "https://picsum.photos/seed/project4-2/800/600",
-      "https://picsum.photos/seed/project4-3/800/600",
+      "https://files.thaithantho.info/how_to_uncake_1.png",
+      "https://files.thaithantho.info/how_to_uncake_2.png",
+      "https://files.thaithantho.info/how_to_uncake_3.png",
+      "https://files.thaithantho.info/how_to_uncake_4.jpg",
+      "https://files.thaithantho.info/how_to_uncake_5.jpg",
+      "https://files.thaithantho.info/how_to_uncake_6.jpg",
+      "https://files.thaithantho.info/how_to_uncake_7.jpg",
+      "https://files.thaithantho.info/how_to_uncake_8.jpg",
+      "https://files.thaithantho.info/how_to_uncake_9.jpg",
+      "https://files.thaithantho.info/how_to_uncake_10.jpg",
+      "https://files.thaithantho.info/how_to_uncake_11.jpg",
+      "https://files.thaithantho.info/how_to_uncake_12.jpg",
+      "https://files.thaithantho.info/how_to_uncake_13.jpg",
+      "https://files.thaithantho.info/how_to_uncake_14.jpg",
     ],
     coverImage: "",
     paragraphs: [
@@ -134,24 +157,24 @@ Sound Op: Phuc Nguyen
 
 Special thanks to Buu Nguyen, Khiem Tang, RMIT University`
   },
-  {
-    id: 5,
-    title: "Shape of Memories",
-    role: "Visual Artist",
-    type: "Video",
-    year: "2024",
-    video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
-    images: [
-      "https://picsum.photos/seed/project5-1/800/600",
-      "https://picsum.photos/seed/project5-2/800/600",
-      "https://picsum.photos/seed/project5-3/800/600",
-    ],
-    coverImage: "",
-    paragraphs: [
-      "Shapes of Memories is an audiovisual project that explores the formation of memories through distinct shapes. Using various audiovisual elements, this work aims to activate memories, highlighting the dynamic relationship between sound and visual stimuli to evoke both personal and collective recollections. Shapes of Memories features a blend of ambient and electronic sounds alongside deconstructed visuals, creating a surreal and immersive experience for the audience. This combination enhances sensory engagement and deepens the exploration of how memories are intricately woven into our experiences.",
-      "The project delves into how memories are constructed, deconstructed, and reconstructed through audiovisual media. It challenges traditional narratives by presenting memory as a fluid and fragmented experience rather than a linear recollection of past events."
-    ]
-  },
+  // {
+  //   id: 5,
+  //   title: "Shape of Memories",
+  //   role: "Visual Artist",
+  //   type: "Video",
+  //   year: "2024",
+  //   video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+  //   images: [
+  //     // "https://picsum.photos/seed/project5-1/800/600",
+  //     // "https://picsum.photos/seed/project5-2/800/600",
+  //     // "https://picsum.photos/seed/project5-3/800/600",
+  //   ],
+  //   coverImage: "",
+  //   paragraphs: [
+  //     "Shapes of Memories is an audiovisual project that explores the formation of memories through distinct shapes. Using various audiovisual elements, this work aims to activate memories, highlighting the dynamic relationship between sound and visual stimuli to evoke both personal and collective recollections. Shapes of Memories features a blend of ambient and electronic sounds alongside deconstructed visuals, creating a surreal and immersive experience for the audience. This combination enhances sensory engagement and deepens the exploration of how memories are intricately woven into our experiences.",
+  //     "The project delves into how memories are constructed, deconstructed, and reconstructed through audiovisual media. It challenges traditional narratives by presenting memory as a fluid and fragmented experience rather than a linear recollection of past events."
+  //   ]
+  // },
   {
     id: 6,
     title: "Poor Thoughts",
@@ -160,9 +183,18 @@ Special thanks to Buu Nguyen, Khiem Tang, RMIT University`
     year: "2024",
     video: "https://vimeo.com/1016752750?fl=pl&fe=sh",
     images: [
-      "https://picsum.photos/seed/project6-1/800/600",
-      "https://picsum.photos/seed/project6-2/800/600",
-      "https://picsum.photos/seed/project6-3/800/600",
+      "https://files.thaithantho.info/poor_thought_1.jpg",
+      "https://files.thaithantho.info/poor_thought_2.jpg",
+      "https://files.thaithantho.info/poor_thought_3.jpg",
+      "https://files.thaithantho.info/poor_thought_4.jpg",
+      "https://files.thaithantho.info/poor_thought_5.jpg",
+      "https://files.thaithantho.info/poor_thought_6.jpg",
+      "https://files.thaithantho.info/poor_thought_7.jpg",
+      "https://files.thaithantho.info/poor_thought_8.jpg",
+      "https://files.thaithantho.info/poor_thought_9.jpg",
+      "https://files.thaithantho.info/poor_thought_10.jpg",
+      "https://files.thaithantho.info/poor_thought_11.jpg",
+      "https://files.thaithantho.info/poor_thought_12.jpg"
     ],
     coverImage: "",
     paragraphs: [
@@ -211,9 +243,8 @@ Special thanks to Buu Nguyen, Quynh Nguyen, Ngan Nguyen, Duy Vo, My Le, Jessie S
     year: "2024",
     video: "https://vimeo.com/987500507?fl=pl&fe=sh",
     images: [
-      "https://picsum.photos/seed/project7-1/800/600",
-      "https://picsum.photos/seed/project7-2/800/600",
-      "https://picsum.photos/seed/project7-3/800/600",
+      "https://files.thaithantho.info/dissolving_dimesion_1.png",
+      "https://files.thaithantho.info/dissolving_dimesion_2.png"
     ],
     coverImage: "",
     paragraphs: [
@@ -231,9 +262,14 @@ Special thanks to Buu Nguyen, Quynh Nguyen, Ngan Nguyen, Duy Vo, My Le, Jessie S
     video: "",
     embedIframeSrc: "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FRMITMASSMEDIA%2Fvideos%2F659986486116648%2F&show_text=false&width=560&t=0",
     images: [
-      "https://picsum.photos/seed/project8-1/800/600",
-      "https://picsum.photos/seed/project8-2/800/600",
-      "https://picsum.photos/seed/project8-3/800/600",
+      "https://files.thaithantho.info/efferescent_2.jpg",
+      "https://files.thaithantho.info/efferescent_1.jpg",
+      "https://files.thaithantho.info/efferescent_3.jpg",
+      "https://files.thaithantho.info/efferescent_4.jpg",
+      "https://files.thaithantho.info/efferescent_6.jpg",
+      "https://files.thaithantho.info/efferescent_7.jpg",
+      "https://files.thaithantho.info/efferescent_8.jpg",
+
     ],
     coverImage: "",
     paragraphs: [
@@ -294,7 +330,13 @@ Advisor: thaithantho, Pat Phuong, Vo Duy, Khanh Duy, Luu Duc Lam`
     year: "2023",
     video: "https://vimeo.com/947821180",
     teaserVideo: "https://vimeo.com/1014373463?fl=pl&fe=sh",
-    images: [],
+    images: [
+      "https://files.thaithantho.info/anybody_anything_1.jpg",
+      "https://files.thaithantho.info/anybody_anything_2.jpg",
+      "https://files.thaithantho.info/anybody_anything_3.jpg",
+      "https://files.thaithantho.info/anybody_anything_4.jpg",
+      "https://files.thaithantho.info/anybody_anything_5.jpg"
+    ],
     coverImage: "",
     paragraphs: [
       "A teaser and music video created for a major music event featuring artists such as Hoang Thuy Linh, Double 2T, Wean, Changg, and MC Khiemslay, attracting an audience of over 300 guests."
@@ -331,9 +373,9 @@ Colorist: Thai Phan`
     year: "2022",
     video: "https://vimeo.com/863270629?fl=pl&fe=sh",
     images: [
-      "https://picsum.photos/seed/project10-1/800/600",
-      "https://picsum.photos/seed/project10-2/800/600",
-      "https://picsum.photos/seed/project10-3/800/600",
+      "https://files.thaithantho.info/streamer_1.jpg",
+      "https://files.thaithantho.info/streamer_2.jpg",
+      "https://files.thaithantho.info/streamer_3.jpg"
     ],
     coverImage: "", 
     paragraphs: [
@@ -436,53 +478,54 @@ export function Project() {
             </div>
           )}
 
+          {project.teaserVideo && (
+            <div className="project-teaser" style={{ marginTop: '24px', marginBottom: '24px' }}>
+              <h2 className="project-section-heading">Teaser</h2>
+              <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
+                {(() => {
+                  const match = project.teaserVideo.match(/vimeo\.com\/(\d+)/);
+                  const vimeoId = match?.[1];
+                  const embedUrl = vimeoId
+                    ? `https://player.vimeo.com/video/${vimeoId}?autoplay=0&muted=0&loop=0&byline=0&title=0&portrait=0&controls=1`
+                    : project.teaserVideo;
+                  return (
+                    <iframe
+                      src={embedUrl}
+                      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                      allowFullScreen
+                      title={`${project.title} teaser`}
+                    />
+                  );
+                })()}
+              </div>
+            </div>
+          )}
+
           <div className="project-gallery" style={{ marginTop: '24px' }}>
             <h2 className="project-section-heading">Gallery</h2>
             <div className="project-gallery-container">
-              {project.teaserVideo ? (
-                <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
-                  {(() => {
-                    const match = project.teaserVideo.match(/vimeo\.com\/(\d+)/);
-                    const vimeoId = match?.[1];
-                    const embedUrl = vimeoId
-                      ? `https://player.vimeo.com/video/${vimeoId}?autoplay=0&muted=0&loop=0&byline=0&title=0&portrait=0&controls=1`
-                      : project.teaserVideo;
-                    return (
-                      <iframe
-                        src={embedUrl}
-                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
-                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                        allowFullScreen
-                        title={`${project.title} teaser`}
-                      />
-                    );
-                  })()}
-                </div>
-              ) : (
-                <>
-                  <button 
-                    className="gallery-nav-btn gallery-nav-left"
-                    onClick={handlePrev}
-                    aria-label="Previous image"
-                  >
-                    ‹
-                  </button>
-                  <div className="carousel" ref={carouselRef}>
-                    {project.images.map((img, idx) => (
-                      <div key={idx} className="carousel-cell">
-                        <img src={img} alt={`${project.title} image ${idx + 1}`} />
-                      </div>
-                    ))}
+              <button 
+                className="gallery-nav-btn gallery-nav-left"
+                onClick={handlePrev}
+                aria-label="Previous image"
+              >
+                ‹
+              </button>
+              <div className="carousel" ref={carouselRef}>
+                {project.images.map((img, idx) => (
+                  <div key={idx} className="carousel-cell">
+                    <img src={img} alt={`${project.title} image ${idx + 1}`} />
                   </div>
-                  <button 
-                    className="gallery-nav-btn gallery-nav-right"
-                    onClick={handleNext}
-                    aria-label="Next image"
-                  >
-                    ›
-                  </button>
-                </>
-              )}
+                ))}
+              </div>
+              <button 
+                className="gallery-nav-btn gallery-nav-right"
+                onClick={handleNext}
+                aria-label="Next image"
+              >
+                ›
+              </button>
             </div>
           </div>
         </section>

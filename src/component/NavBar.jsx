@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 /**
  * Simple text-scramble on hover.
@@ -55,7 +56,9 @@ function stopScramble(el) {
 export function Navbar() {
   return (
     <nav className="navbar">
-      <div className="nav-title">THAITHANTHO</div>
+      <div className="nav-title">
+        <img src={logo} alt="thaithantho logo" style={{ height: '20px', width: 'auto', maxWidth: '200px' }} />
+      </div>
       <div className="nav-links-row">
         <ul className="nav-links">
           <li>

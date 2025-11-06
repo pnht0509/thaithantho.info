@@ -46,17 +46,17 @@ const projects = [
       "https://imagedelivery.net/9e6F9WGVMKEgqvozZdl8wA/5be63215-9cc1-4e08-ca80-6b09654dfd00/public"
     ],
   },
-  {
-    id: 5,
-    title: "Shape of Memories",
-    role: "Visual Artist",
-    type: "Video",
-    year: "2024",
-    video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
-    images: [
-      "https://imagedelivery.net/9e6F9WGVMKEgqvozZdl8wA/88002fa4-db50-4d71-7589-6c1d5fa7bd00/public"
-    ],
-  },
+  // {
+  //   id: 5,
+  //   title: "Shape of Memories",
+  //   role: "Visual Artist",
+  //   type: "Video",
+  //   year: "2024",
+  //   video: "https://assets.mixkit.co/videos/4111/4111-720.mp4",
+  //   images: [
+  //     "https://imagedelivery.net/9e6F9WGVMKEgqvozZdl8wA/88002fa4-db50-4d71-7589-6c1d5fa7bd00/public"
+  //   ],
+  // },
   {
     id: 6,
     title: "\"Poor\" Thoughts",
