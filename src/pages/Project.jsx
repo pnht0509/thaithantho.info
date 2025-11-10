@@ -398,6 +398,7 @@ export function Project() {
   const [project, setProject] = useState(null);
   const carouselRef = useRef(null);
   const flickityInstanceRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth <= 767 : false));
 
   const slugify = (text) => {
     return text
@@ -414,6 +415,16 @@ export function Project() {
     const foundProject = projects.find(p => slugify(p.title) === slug);
     setProject(foundProject || projects[0]);
   }, [slug]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const updateIsMobile = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+    updateIsMobile();
+    window.addEventListener("resize", updateIsMobile);
+    return () => window.removeEventListener("resize", updateIsMobile);
+  }, []);
 
   useEffect(() => {
     if (!project || !project.images || !carouselRef.current) return;
@@ -462,11 +473,11 @@ export function Project() {
     <div className="home-root">
       <div className="home-layout">
         <section className="home-main">
-          <h2 className="project-section-heading">{project.type}</h2>
-          <h1 className="project-cover-title" style={{ position: 'static', transform: 'none', textAlign: 'left', fontSize: '26px', margin: '0 0 16px 0' }}>{project.title.toUpperCase()}</h1>
+          {/* <h2 className="project-section-heading">{project.type}</h2> */}
+          {/* <h1 className="project-cover-title" style={{ position: 'static', transform: 'none', textAlign: 'left', fontSize: '26px', margin: '0 0 16px 0' }}>{project.title.toUpperCase()}</h1> */}
 
           <div className="project-text" style={{ marginBottom: '24px' }}>
-            <h2 className="project-section-heading">About</h2>
+            <h2 className="project-section-heading" style={{ paddingTop: '10px' }}>About</h2>
             <p>{project.paragraphs[0]}</p>
             <p>{project.paragraphs[1]}</p>
           </div>
@@ -497,6 +508,77 @@ export function Project() {
                       title={`${project.title} teaser`}
                     />
                   );
+                })()}
+              </div>
+            </div>
+          )}
+
+          {isMobile && (project.video || project.embedIframeSrc) && (
+            <div className="project-video" style={{ marginTop: '24px', marginBottom: '24px' }}>
+              <h2 className="project-section-heading">Video</h2>
+              <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
+                {(() => {
+                  if (project.embedIframeSrc) {
+                    return (
+                      <iframe
+                        src={project.embedIframeSrc}
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                        scrolling="no"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                        allowFullScreen
+                        title={`${project.title} video`}
+                      />
+                    );
+                  }
+                  const isVimeo = typeof project.video === 'string' && project.video.includes('vimeo.com');
+                  if (isVimeo) {
+                    const match = project.video.match(/vimeo\.com\/(\d+)/);
+                    const vimeoId = match?.[1];
+                    const embedUrl = vimeoId
+                      ? `https://player.vimeo.com/video/${vimeoId}?autoplay=0&muted=0&loop=0&byline=0&title=0&portrait=0&controls=1&background=0`
+                      : undefined;
+                    return embedUrl ? (
+                      <iframe
+                        src={embedUrl}
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                        allowFullScreen
+                        title={`${project.title} video`}
+                      />
+                    ) : null;
+                  }
+                  const isYouTube = typeof project.video === 'string' && (project.video.includes('youtube.com') || project.video.includes('youtu.be'));
+                  if (isYouTube) {
+                    const idFromShort = project.video.match(/youtu\.be\/([\w-]+)/)?.[1];
+                    const idFromWatch = project.video.match(/[?&]v=([\w-]+)/)?.[1];
+                    const ytId = idFromShort || idFromWatch;
+                    const embedUrl = ytId
+                      ? `https://www.youtube.com/embed/${ytId}?autoplay=0&mute=0&loop=0&controls=1&modestbranding=1&rel=0`
+                      : undefined;
+                    return embedUrl ? (
+                      <iframe
+                        src={embedUrl}
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        title={`${project.title} video`}
+                      />
+                    ) : null;
+                  }
+                  if (project.video) {
+                    return (
+                      <video
+                        controls
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+                        src={project.video}
+                      />
+                    );
+                  }
+                  return null;
                 })()}
               </div>
             </div>

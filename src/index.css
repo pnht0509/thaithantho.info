@@ -143,8 +143,9 @@ body {
 .home-main { padding: var(--space-md) var(--space-md) var(--space-md) var(--space-md); position: relative; }
 .home-main h2 { font-size: 22px; font-weight: 700; margin: 0 0 var(--space-sm) 0; }
 .home-main h1 { font-size: 26px; font-weight: 700; margin: 0; }
+.home-main-video { display: none; }
 
-.home-side { border-left: 2px solid #4a4a4a; padding: var(--space-md) var(--space-md); display: flex; flex-direction: column; justify-content: flex-start; position: sticky; top: 0; align-self: start; height: calc(100vh - var(--nav-height) - var(--footer-height)); color: var(--blue); font-family: "thaithantho-2y", var(--font-family); }
+.home-side { border-left: 2px solid #4a4a4a; padding: var(--space-md) var(--space-md); display: flex; flex-direction: column; justify-content: flex-start; position: sticky; top: 0; align-self: start; height: calc(100vh - var(--nav-height) - var(--footer-height)); color: var(--blue); font-family: "thaithantho-2y", var(--font-family); margin-top: 16px;}
 .home-side h2 { font-size: 22px; font-weight: 700; }
 .home-side-video { width: 100%; height: 300px; background: #d9d9d9; align-self: stretch; object-fit: cover; display: block; margin-top: auto; }
 
@@ -255,9 +256,20 @@ body {
     display: none;
   }
 
+  /* Video under SYSTEM OVERVIEW in responsive mode */
+  .home-main-video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
   .projects-gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .project-video-responsive {
+    display: flex;
   }
 }
 

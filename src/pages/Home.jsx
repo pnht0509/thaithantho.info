@@ -60,6 +60,13 @@ export function Home() {
             <p><strong>Capabilities:</strong> 3D, VFX, Film, Photography, Sound, Design</p>
             <p><strong>Function:</strong> Creates experimental visuals exploring digital chaos, identity, and society</p>
           </div>
+          <div className="home-main-video" style={{ position: 'relative', paddingTop: '56.25%', marginBottom: 16 }}>
+            <img
+              src="https://files.thaithantho.info/logo.gif"
+              alt="thaithantho logo animation"
+              style={{ position: 'absolute', top: 0, left: 0, height: '100%', width: '100%', objectFit: 'cover', display: 'block', border: '0' }}
+            />
+          </div>
           <div className="home-bottom-meta">
             <div className="meta-grid">
               <div className="label">SYSTEM LOCATION</div>
